@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ZARI | LOGN IN</title>
+   <link rel="stylesheet" href="login_.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+   <!-- Video Background -->
+   <div class="video-background">
+       <video autoplay muted loop playsinline>
+           <source src="assets/assests:video.mp4" type="video/mp4">
+           <source src="assets/video.webm" type="video/webm">
+           <img src="assets/fallback-image.jpg" alt="Background">
+       </video>
+       <div class="video-overlay"></div>
+   </div>
+   
+   <!-- Main container -->
+   <div class="container">
+       <div class="content">
+           <div class="header">
+               <h1 class="zari-logo">ZARI</h1>
+               <p class="welcome-text">WELCOME BACK</p>
+           </div>
+
+           <!-- Login Form -->
+           <div class="form-section">
+               <div class="form-container">
+                   <form id="login-form" class="login-form">
+                
+                       <!-- Username Field -->
+                       <div class="input-group">
+                           <input type="text" placeholder="Username" required />
+                           <i class="fas fa-user icon-right"></i>
+                       </div>
+
+                       <!-- Password Field -->
+                       <div class="input-group">
+                           <input type="password" placeholder="Password" required />
+                           <i class="fas fa-lock icon-right"></i>
+                       </div>
+
+                       <!-- Submit Button -->
+                       <button type="submit" class="btn">LOG IN</button>
+
+                       <!-- Form Footer -->
+                       <div class="form-footer">
+                           <a href="#"style="margin-left:auto">Forgot password?</a>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+
+   <!-- Footer -->
+   <footer class="site-footer">
+       <p>ZARI <time class="year">2025</time> &copy; All rights reserved.</p>
+   </footer>
+
+   <!-- Redirect Script -->
+   <script>
+     document.getElementById("login-form").addEventListener("submit", function(event) {
+       event.preventDefault();
+       window.location.href = "websucces_.html";
+     });
+   </script>
+</body>
+</html>

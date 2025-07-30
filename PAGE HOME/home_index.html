@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZARI - Urban Streetwear</title>
+  <link rel="stylesheet" href="web_style.css" />
+  <link rel="stylesheet" href="mostwanted.css" />
+  <link rel="stylesheet" href="categories.css" />
+  <script defer src="web_script.js"></script>
+</head>
+<body>
+
+<!-- ========================================================== NAVBAR ========================================================== -->
+<header class="custom-header">
+  <div class="top-row">
+    <button class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    
+    <div class="left-logo">
+      <div class="logo">Z A R I</div>
+    </div>
+
+    <div class="center-search">
+      <input type="text" placeholder="Search products..." class="search-input" />
+    </div>
+
+    <div class="nav-icons">
+      <button onclick="window.location.href='web_login.html'">Login</button>
+      <button onclick="window.location.href='cart/web_cart.html'">Cart</button>
+    </div>
+  </div>
+
+    <div class="bottom-row">
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="web_index.html">Home</a>
+            <ul class="dropdown">
+              <li><a href="#zari">ZARI</a></li>
+              <li><a href="#category">CATEGORIES</a></li>
+              <li><a href="#most-wanted">MOST WANTED</a></li>
+              <li><a href="#new-arrival">NEW ARRIVAL</a></li>
+              <li><a href="#brands">BRANDS YOU LOVE</a></li>
+            </ul>
+          </li>
+          <li>
+          <a href="#category">Categories</a>
+
+          <ul class="dropdown">
+            <li><a href="./CategoryDisp/top.html">TOPS</a></li>
+            <li><a href="./CategoryDisp/bottom.html">BOTTOMS</a></li>
+            <li><a href="./CategoryDisp/acessories.html">ACCESSORIES</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Brands</a>
+          <ul class="dropdown">
+            <li><a href="../WEB1201_Assignment/BrandsDisp/opt.html">OPT</a></li>
+            <li><a href="web_index.html#svg">SVG</a></li>
+            <li><a href="web_index.html#svg">NAISE</a></li>
+            <li><a href="web_index.html#svg">KRTKL</a></li>
+            <li><a href="web_index.html#stoned">STONED & CO</a></li>
+          </ul>
+        </li>
+
+          <li><a href="./web_contact.html">Contact</a></li>
+          <li><a href="./web_about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<!-- ========================================================== BACK TO TOP BUTTON ========================================================== -->
+    <button class="back-to-top" id="backToTop">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2L8 6h3v10h2V6h3l-4-4z"/>
+        </svg>
+    </button>
+ 
+<!-- ========================================================== HERO SECTION ========================================================== -->
+  <section id="zari" class="hero-section" style="background-image: url('bg-hero.jpg');">
+    <h1>Z A R I</h1>
+  </section>
+
+<!-- ========================================================== LOGO CAROUSELL ========================================================== -->
+  <section class="logo-marquee">
+  <div class="logo-track">
+    <img src="LogoCarousell.png" alt="Brand Logos 1">
+    <img src="LogoCarousell.png" alt="Brand Logos 2">
+    <img src="LogoCarousell.png" alt="Brand Logos 3">
+    <img src="LogoCarousell.png" alt="Brand Logos 4">
+    <img src="LogoCarousell.png" alt="Brand Logos 5">
+  </div>
+</section>
+
+<!-- ========================================================== CATEGORY SECTION ========================================================== -->
+  <section id="category" class="category-section">
+    <div class="category-column top">
+      <div class="overlay">
+        <h2>TOP</h2>
+        <a href="./CategoryDisp/top.html" class="category-button">Explore Tops</a>
+      </div>
+    </div>
+    <div class="category-column bottom">
+      <div class="overlay">
+        <h2>BOTTOM</h2>
+        <a href="./CategoryDisp/BOTTOM.html" class="category-button">Explore Bottoms</a>
+      </div>
+    </div>
+    <div class="category-column accessories">
+      <div class="overlay">
+        <h2>ACCESSORIES</h2>
+        <a href="./CategoryDisp/acessories.html" class="category-button">Explore Accessories</a>
+      </div>
+    </div>
+  </section>
+
+<!-- ========================================================== MOST WANTED SECTION ========================================================== -->
+  <section id="most-wanted" class="most-wanted-section">
+    <div class="section-header">
+        <p class="section-subtitle">Discover our premium collection of handpicked products that define excellence and style</p>
+        <h1 class="section-title">MOST WANTED</h1>
+    </div>
+    
+    <div class="carousel-container">
+        <div class="carousel-track" id="track">
+            <!-- Card 1 -->
+            <div class="carousel-card card-1">
+                <img class="card-bg" src="../WEB1201_Assignment/MostWantedTrial/images/_optn2.jpg" alt="Background">
+                <div class="most-wanted-tag">Most Wanted: OPT.</div>
+                <div class="product-images">
+                    <div class="product-image-left">
+                        <img src="../WEB1201_Assignment/MostWantedTrial/images/opt1cc.jpg" alt="Product detail" style="filter: saturate(0);">
+                        <div class="product-description">
+                            <span class="product-description-top">Respect Comes First</span>
+                            Inspired by 19th-century cowboy culture, OPT brings the raw energy of a horse to life.
+                            <span class="product-description-bottom">BOLD • GENTLE</span>
+                        </div>
+                    </div>
+                    <div class="product-image-right">
+                        <img src="../WEB1201_Assignment/MostWantedTrial/images/opt01.jpg" alt="Product">
+                        <div class="product-name">RODEO</div>
+                    </div>
+                </div>
+                <a href="#" class="action-button">EXPLORE</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="carousel-card card-2">
+                <img class="card-bg" src="../WEB1201_Assignment/MostWantedTrial/images/stn2.jpg" alt="Background">
+                <div class="most-wanted-tag">MOST WANTED: STONED N CO</div>
+                <div class="product-images">
+                    <div class="product-image-left">
+                        <img src="../WEB1201_Assignment/MostWantedTrial/images/stn1c.jpg" alt="Product detail" style="filter: saturate(0);">
+                        <div class="product-description">
+                            <span class="product-description-top">LEGACY STITCHED</span>
+                            This isn't just streetwear. Its legacy is stitched in every thread.
+                            <span class="product-description-bottom">STREET • LEGACY</span>
+                        </div>
+                    </div>
+                    <div class="product-image-right">
+                        <img src="../WEB1201_Assignment/MostWantedTrial/images/stn3.jpg" alt="Product">
+                        <div class="product-name">EMPIRE</div>
+                    </div>
+                </div>
+                <a href="#" class="action-button">DISCOVER</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="carousel-card card-3">
+                <img class="card-bg" src="../WEB1201_Assignment/MostWantedTrial/images/krtkl22.jpg" alt="Background">
+                <div class="most-wanted-tag">MOST WANTED: KRTKL</div>
+                <div class="product-images">
+                    <div class="product-image-left">
+                        <img src="../WEB1201_Assignment/MostWantedTrial/images/krtkl11c.jpg" alt="Product detail" style="filter: saturate(0);">
+                        <div class="product-description">
+                            <span class="product-description-top">FEEL THE TORNADO</span>
+                            A collection with feels. Be the THORNADO, strike the feel.
+                            <span class="product-description-bottom">FIERCE • BOLD</span>
+                        </div>
+                    </div>
+                    <div class="product-image-right">
+                        <img src="../WEB1201_Assignment/MostWantedTrial/images/krtkl33.jpg" alt="Product">
+                        <div class="product-name">HUE MODE</div>
+                    </div>
+                </div>
+                <a href="#" class="action-button">VIEW MORE</a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="carousel-card card-4">
+                <img class="card-bg" src="../WEB1201_Assignment/MostWantedTrial/images/naise22.jpg" alt="Background">
+                <div class="most-wanted-tag">MOST WANTED: NAISE</div>
+                <div class="product-images">
+                    <div class="product-image-left">
+                        <img src="../WEB1201_Assignment/MostWantedTrial/images/naise11c.jpg" alt="Product detail" style="filter: saturate(0);">
+                        <div class="product-description">
+                            <span class="product-description-top">CORDUROY COMFORT</span>
+                            Stylish with Corduroy Collar. Revolutionary comfort meets street-ready style.
+                            <span class="product-description-bottom">COMFORT • STYLE</span>
+                        </div>
+                    </div>
+                    <div class="product-image-right">
+                        <img src="../WEB1201_Assignment/MostWantedTrial/images/naise33.jpg" alt="Product">
+                        <div class="product-name">DMITRI</div>
+                    </div>
+                </div>
+                <a href="#" class="action-button">SHOP NOW</a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="carousel-card card-5">
+                <img class="card-bg" src="../WEB1201_Assignment/MostWantedTrial/images/svg22.jpg" alt="Background">
+                <div class="most-wanted-tag">MOST WANTED: SVG</div>
+                <div class="product-images">
+                    <div class="product-image-left">
+                        <img src="../WEB1201_Assignment/MostWantedTrial/images/svg11c.jpg" alt="Product detail" style="filter: saturate(0);">
+                        <div class="product-description">
+                            <span class="product-description-top">PREMIUM CRAFT</span>
+                            Signature collection featuring premium craftsmanship and innovative materials.
+                            <span class="product-description-bottom">SIGNATURE • PREMIUM</span>
+                        </div>
+                    </div>
+                    <div class="product-image-right">
+                        <img src="../WEB1201_Assignment/MostWantedTrial/images/svg33.jpg" alt="Product">
+                        <div class="product-name">CORDOUIRE</div>
+                    </div>
+                </div>
+                <a href="#" class="action-button">GET YOURS</a>
+            </div>
+        </div>
+
+        <!-- Navigation Dots -->
+        <div class="nav-dots" id="navDots"></div>
+    </div>
+  </section>
+
+<!-- ========================================================== ARRIVAL SECTION ========================================================== -->
+  <section id="new-arrival" class="arrival">
+    <div class="wrapper-arrival">
+      <div class="wrapper-pic">
+        <img src="arrival-pic/1.png">
+        <img src="arrival-pic/2.png">
+        <img src="arrival-pic/3.png">
+      </div>
+      <div class="text-caption">
+        COLLECTION VOL . 1
+      </div>
+      <div class="text-title">
+        LATEST 01<br>
+        ARRIVALS
+      </div>
+      <div class="text-caption">
+        CURATED ARRIVALS TO REFRESH YOUR WARDROBE
+      </div>
+    </div>
+
+    <div class="gallery-wrapper">
+      <div class="wrapper-new-collection">
+        <div class="model-wrapper">
+          <img src="SVG/MODEL/model2.jpg" class="overlay-img">
+          <img src="SVG/MODEL/model1.jpg" class="base-img">
+          <button class="buy-btn">BUY</button>
+        </div>
+      </div>
+
+      <div class="wrapper-new-collection">
+        <div class="model-wrapper">
+          <img src="KRTKL/MODEL/model2.jpg" class="overlay-img">
+          <img src="KRTKL/MODEL/model1.jpg" class="base-img">
+          <button class="buy-btn">BUY</button>
+        </div>
+      </div>
+
+      <div class="wrapper-new-collection">
+        <div class="model-wrapper">
+          <img src="STONED/MODEL/model2.jpg" class="overlay-img">
+          <img src="STONED/MODEL/model1.jpg" class="base-img">
+          <button class="buy-btn">BUY</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+<!-- ========================================================== BRAND SECTION ========================================================== -->
+<section id="brands" class="brands">
+        <div class="content-container">
+            <div class="wrapper-text">
+                <div class="text-bold">
+                    BUILD BY BRANDS
+                </div>
+                <div class="text-regular">
+                    DISCOVER YOUR SIGNATURE BRAND
+                </div>
+            </div>
+            <div class="wrapper-box">
+                <!--OPT-->
+                <a href="../WEB1201_Assignment/BrandsDisp/opt.html">
+                    <div class="box">
+                        <div class="overlay">
+                            <img src="brand-logo-white/opt.svg" alt="OPT Logo">
+                        </div>
+                        <div class="video-wrapper">
+                            <video autoplay muted playsinline preload="auto" loop>
+                                <source src="OPT/VID OPT.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="text">
+                            <div>OPT.</div>
+                            <div>EST. 2016</div>
+                        </div>
+                    </div>
+                </a>
+                <!--SVG-->
+                <a href="../WEB1201_Assignment/BrandsDisp/svg.html">
+                    <div class="box">
+                        <div class="overlay">
+                            <img src="brand-logo-white/svg.svg" alt="SVG Logo">
+                        </div>
+                        <div class="video-wrapper">
+                            <video autoplay muted playsinline preload="auto" loop>
+                                <source src="SVG/VID SVG.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="text">
+                            <div>SVG</div>
+                            <div>EST. 2016</div>
+                        </div>
+                    </div>
+                </a>
+                <!--NAISE-->
+                <a href="../WEB1201_Assignment/BrandsDisp/naise.html">
+                    <div class="box">
+                        <div class="overlay">
+                            <img src="brand-logo-white/naise.svg" alt="NAISE Logo">
+                        </div>
+                        <div class="video-wrapper">
+                            <video autoplay muted playsinline preload="auto" loop>
+                                <source src="NAISE/VID NAISE.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="text">
+                            <div>NAISE</div>
+                            <div>EST. 2016</div>
+                        </div>
+                    </div>
+                </a>
+                <!--KRTKL-->
+                <a href="../WEB1201_Assignment/BrandsDisp/krtkl.html">
+                    <div class="box">
+                        <div class="overlay">
+                            <img src="brand-logo-white/krtkl.svg" alt="KRTKL Logo">
+                        </div>
+                        <div class="video-wrapper">
+                            <video autoplay muted playsinline preload="auto" loop>
+                                <source src="KRTKL/VID KRTKL.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="text">
+                            <div>KRTKL</div>
+                            <div>EST. 2016</div>
+                        </div>
+                    </div>
+                </a>
+                <!--STONED-->
+                <a href="../WEB1201_Assignment/BrandsDisp/stoned.html">
+                    <div class="box">
+                        <div class="overlay">
+                            <img src="brand-logo-white/stoned.svg" alt="STONED Logo">
+                        </div>
+                        <div class="video-wrapper">
+                            <video autoplay muted playsinline preload="auto" loop>
+                                <source src="STONED/VID STONED.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="text">
+                            <div>STONED</div>
+                            <div>EST. 2016</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- ========================================================== FOOTER SECTION ========================================================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Desktop Layout -->
+            <div class="footer-main">
+                <div class="logo">ZARI</div>
+                
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Category</a></li>
+                        <li><a href="#">Brand</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Return & Exchanges</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Brand</h3>
+                <ul>
+                    <li><a href="#">OPT</a></li>
+                    <li><a href="#">SVG</a></li>
+                    <li><a href="#">NAISE</a></li>
+                    <li><a href="#">KRTKL</a></li>
+                    <li><a href="#">STONED</a></li>
+                </ul>
+            </div>
+        </div>
+
+            <!-- Mobile Layout -->
+            <div class="mobile-footer">
+                <div class="mobile-logo">ZARI</div>
+                
+                <div class="dropdown-section">
+                    <div class="dropdown-header" onclick="toggleDropdown(this)">
+                        <span>Shop</span>
+                        <span class="dropdown-icon">▼</span>
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Category</a></li>
+                            <li><a href="#">Brand</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            <div class="dropdown-section">
+                <div class="dropdown-header" onclick="toggleDropdown(this)">
+                    <span>Help</span>
+                    <span class="dropdown-icon">▼</span>
+                </div>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Return & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown-section">
+                <div class="dropdown-header" onclick="toggleDropdown(this)">
+                    <span>Brand</span>
+                    <span class="dropdown-icon">▼</span>
+                </div>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#">OPT</a></li>
+                        <li><a href="#">SVG</a></li>
+                        <li><a href="#">NAISE</a></li>
+                        <li><a href="#">KRTKL</a></li>
+                        <li><a href="#">STONED</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>&copy; 2025 ZARI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

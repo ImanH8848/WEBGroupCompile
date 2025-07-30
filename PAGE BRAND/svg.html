@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZARI - Urban Streetwear</title>
+  <link rel="stylesheet" href="brandstyle.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="custom-header">
+    <div class="top-row">
+      <div class="left-logo">
+        <div class="logo">ZARI</div>
+      </div>
+      <div class="center-search">
+        <input type="text" placeholder="Search products..." class="search-input" />
+      </div>
+      <div class="nav-icons">
+        <button onclick="window.location.href='web_login.html'">Login</button>
+        <button>Cart</button>
+      </div>
+    </div>
+    <div class="bottom-row">
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="../web_index.html">Home</a>
+            <ul class="dropdown">
+              <li><a href="../web_index.html">ZARI</a></li>
+              <li><a href="../categories.html">CATEGORIES</a></li>
+              <li><a href="#">NEW ARRIVAL</a></li>
+              <li><a href="#">MOST WANTED</a></li>
+              <li><a href="#">BRANDS YOU LOVE</a></li>
+            </ul>
+          </li>
+          <li>
+          <a href="./categories.html">Categories</a>
+          <ul class="dropdown">
+            <li><a href="./CategoryDisp/top.html">Tops</a></li>
+            <li><a href="./CategoryDisp/bottom.html">Bottoms</a></li>
+            <li><a href="./CategoryDisp/acessories.html">Accessories</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Brands</a>
+          <ul class="dropdown">
+            <li><a href="../BrandsDisp/opt.html">OPT</a></li>
+            <li><a href="../BrandsDisp/svg.html">SVG</a></li>
+            <li><a href="../BrandsDisp/naise.html">NAISE</a></li>
+            <li><a href="../BrandsDisp/krtkl.html">KRTKL</a></li>
+            <li><a href="../BrandsDisp/stoned.html">STONED & CO</a></li>
+          </ul>
+          <li><a href="../web_contact.html">Contact</a></li>
+          <li><a href="../web_about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="banner">
+    <img src="svg_disp.jpg" alt="Top Category Banner" class="banner-image" style="object-fit: cover; object-position: center 47%; height: 100%; width: 100%;"/>
+    <img src="../brand-logo-white/svg.svg" alt="Company Logo" class="company-logo" />
+  </section>
+
+
+  <section class="product-grid">
+    <div class="product-card">
+      <img src="../SVG/TOP/SVG_Longsleeve black black.webp" alt="OPT Product">
+      <div class="price-tag">$32</div>
+    </div>
+    <div class="product-card">
+      <img src="../SVG/TOP/SVG_Longsleeve white BACK.webp" alt="OPT Product">
+      <div class="price-tag">$32</div>
+    </div>
+    <div class="product-card">
+      <img src="../SVG/TOP/SVG_Varsity.jpeg.webp" alt="OPT Product">
+      <div class="price-tag">$32</div>
+    </div>
+    <div class="product-card">
+      <img src="../SVG/TOP/SVG_Varsity1 back.webp" alt="OPT Product">
+      <div class="price-tag">$32</div>
+    </div>
+    <div class="product-card">
+      <img src="../SVG/TOP/SVG_Varsity2 front.webp" alt="OPT Product">
+      <div class="price-tag">$32</div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Desktop Layout -->
+            <div class="footer-main">
+                <div class="logo">ZARA</div>
+                
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Category</a></li>
+                        <li><a href="#">Brand</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Return & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Brand</h3>
+                    <ul>
+                        <li><a href="#">OPT</a></li>
+                        <li><a href="#">SVG</a></li>
+                        <li><a href="#">NAISE</a></li>
+                        <li><a href="#">KRTKL</a></li>
+                        <li><a href="#">STONED</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mobile Layout -->
+            <div class="mobile-footer">
+                <div class="mobile-logo">ZARA</div>
+                
+                <div class="dropdown-section">
+                    <div class="dropdown-header" onclick="toggleDropdown(this)">
+                        <span>Shop</span>
+                        <span class="dropdown-icon">▼</span>
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Category</a></li>
+                            <li><a href="#">Brand</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dropdown-section">
+                    <div class="dropdown-header" onclick="toggleDropdown(this)">
+                        <span>Help</span>
+                        <span class="dropdown-icon">▼</span>
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Shipping & Delivery</a></li>
+                            <li><a href="#">Return & Exchanges</a></li>
+                            <li><a href="#">Size Guide</a></li>
+                            <li><a href="#">Track Order</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dropdown-section">
+                    <div class="dropdown-header" onclick="toggleDropdown(this)">
+                        <span>Brand</span>
+                        <span class="dropdown-icon">▼</span>
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="#">OPT</a></li>
+                            <li><a href="#">SVG</a></li>
+                            <li><a href="#">NAISE</a></li>
+                            <li><a href="#">KRTKL</a></li>
+                            <li><a href="#">STONED</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>&copy; 2025 ZARA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDropdown(header) {
+            const section = header.parentElement;
+            const content = section.querySelector('.dropdown-content');
+            
+            section.classList.toggle('active');
+            content.classList.toggle('active');
+        }
+    </script>

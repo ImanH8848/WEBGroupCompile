@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+<!-- ========================================================== NAVBAR ========================================================== -->
+    <header class="custom-header">
+        <div class="top-row">
+        <div class="left-logo">
+            <div class="logo">ZARI</div>
+        </div>
+
+        <div class="center-search">
+            <input type="text" placeholder="Search products..." class="search-input" />
+        </div>
+
+        <div class="nav-icons">
+            <button onclick="window.location.href='web_login.html'">Login</button>
+            <button>Cart</button>
+        </div>
+        </div>
+
+        <div class="bottom-row">
+        <nav>
+            <ul class="nav-links">
+            <li>
+                <a href="web_index.html">Home</a>
+                <ul class="dropdown">
+                <li><a href="#zari">ZARI</a></li>
+                <li><a href="#">CATEGORIES</a></li>
+                <li><a href="#most-wanted">MOST WANTED</a></li>
+                <li><a href="#new-arrival">NEW ARRIVAL</a></li>
+                <li><a href="#brands">BRANDS YOU LOVE</a></li>
+                </ul>
+            </li>
+            <li>
+            <a href="#categories">Categories</a>
+            <ul class="dropdown">
+                <li><a href="./CategoryDisp/top.html">TOPS</a></li>
+                <li><a href="./CategoryDisp/bottom.html">BOTTOMS</a></li>
+                <li><a href="./CategoryDisp/acessories.html">ACCESSORIES</a></li>
+            </ul>
+            </li>
+
+            <li>
+            <a href="#">Brands</a>
+            <ul class="dropdown">
+                <li><a href="../WEB1201_Assignment/BrandsDisp/opt.html">OPT</a></li>
+                <li><a href="web_index.html#svg">SVG</a></li>
+                <li><a href="web_index.html#svg">NAISE</a></li>
+                <li><a href="web_index.html#svg">KRTKL</a></li>
+                <li><a href="web_index.html#stoned">STONED & CO</a></li>
+            </ul>
+            </li>
+            <li><a href="web_contact.html">Contact</a></li>
+            <li><a href="web_about.html">About Us</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+<!-- ========================================================== CONTENT SECTION ========================================================== -->
+
+    <!-- Calendar Overlay -->
+    <div class="calendar-overlay" id="calendarOverlay">
+        <div class="calendar-container" id="calendar">
+            <div class="calendar-header">
+                <button class="calendar-nav" id="prevMonth">‹</button>
+                <div class="calendar-title" id="calendarTitle">July 2025</div>
+                <button class="calendar-nav" id="nextMonth">›</button>
+            </div>
+            <div class="calendar-grid" id="calendarGrid">
+                <!-- Static calendar days -->
+                <div class="calendar-day-header">Sun</div>
+                <div class="calendar-day-header">Mon</div>
+                <div class="calendar-day-header">Tue</div>
+                <div class="calendar-day-header">Wed</div>
+                <div class="calendar-day-header">Thu</div>
+                <div class="calendar-day-header">Fri</div>
+                <div class="calendar-day-header">Sat</div>
+                
+                <!-- Previous month days -->
+                <div class="calendar-day other-month">29</div>
+                <div class="calendar-day other-month">30</div>
+                
+                <!-- Current month days -->
+                <div class="calendar-day">1</div>
+                <div class="calendar-day">2</div>
+                <div class="calendar-day">3</div>
+                <div class="calendar-day">4</div>
+                <div class="calendar-day">5</div>
+                <div class="calendar-day">6</div>
+                <div class="calendar-day">7</div>
+                <div class="calendar-day">8</div>
+                <div class="calendar-day">9</div>
+                <div class="calendar-day">10</div>
+                <div class="calendar-day">11</div>
+                <div class="calendar-day">12</div>
+                <div class="calendar-day">13</div>
+                <div class="calendar-day">14</div>
+                <div class="calendar-day">15</div>
+                <div class="calendar-day">16</div>
+                <div class="calendar-day">17</div>
+                <div class="calendar-day">18</div>
+                <div class="calendar-day">19</div>
+                <div class="calendar-day">20</div>
+                <div class="calendar-day">21</div>
+                <div class="calendar-day">22</div>
+                <div class="calendar-day">23</div>
+                <div class="calendar-day">24</div>
+                <div class="calendar-day">25</div>
+                <div class="calendar-day">26</div>
+                <div class="calendar-day">27</div>
+                <div class="calendar-day">28</div>
+                <div class="calendar-day">29</div>
+                <div class="calendar-day today">30</div>
+                <div class="calendar-day">31</div>
+                
+                <!-- Next month days -->
+                <div class="calendar-day other-month">1</div>
+                <div class="calendar-day other-month">2</div>
+                <div class="calendar-day other-month">3</div>
+                <div class="calendar-day other-month">4</div>
+                <div class="calendar-day other-month">5</div>
+                <div class="calendar-day other-month">6</div>
+                <div class="calendar-day other-month">7</div>
+                <div class="calendar-day other-month">8</div>
+                <div class="calendar-day other-month">9</div>
+            </div>
+            <div class="calendar-actions">
+                <button class="calendar-btn" id="clearDates">Clear</button>
+                <button class="calendar-btn primary" id="applyDates">Apply</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Title Section -->
+        <div class="title-section">
+            <h1>Checkout Item</h1>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Delivery Information -->
+                <div class="card">
+                    <h2>Delivery Information</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" id="name" placeholder="Aniq Arshad" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile Number</label>
+                            <input type="tel" id="mobile" placeholder="+6012-345-6789" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Email</label>
+                            <input type="email" id="email" placeholder="aniq@gmail.com" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>City</label>
+                            <input type="text" id="city" placeholder="Sunway" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Poscode</label>
+                            <input type="text" id="zip" placeholder="55000" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Unit Number</label>
+                            <input type="text" id="suite" placeholder="25">
+                        </div>
+                        <div class="form-group">
+                            <label>State</label>
+                            <select id="state" required>
+                                <option value="">Select State</option>
+                                <option value="johor">Johor</option>
+                                <option value="kedah">Kedah</option>
+                                <option value="kelantan">Kelantan</option>
+                                <option value="melaka">Melaka</option>
+                                <option value="negeri-sembilan">Negeri Sembilan</option>
+                                <option value="pahang">Pahang</option>
+                                <option value="penang">Pulau Pinang</option>
+                                <option value="perak">Perak</option>
+                                <option value="perlis">Perlis</option>
+                                <option value="sabah">Sabah</option>
+                                <option value="sarawak">Sarawak</option>
+                                <option value="selangor">Selangor</option>
+                                <option value="terengganu">Terengganu</option>
+                                <option value="kuala-lumpur">Wilayah Persekutuan Kuala Lumpur</option>
+                                <option value="labuan">Wilayah Persekutuan Labuan</option>
+                                <option value="putrajaya">Wilayah Persekutuan Putrajaya</option>
+                            </select>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Address</label>
+                            <input type="text" id="address" placeholder="3343 Long Street" required>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Schedule Delivery -->
+                <div class="card">
+                    <div class="schedule-header">
+                        <h2>Schedule Delivery</h2>
+                        <div class="toggle" id="scheduleToggle"></div>
+                    </div>
+                    <div class="schedule-content" id="scheduleContent">
+                        <div class="form-group">
+                            <label>Dates</label>
+                            <div class="date-input" id="dateInput">
+                                <span id="dateDisplay">Select date</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Note</label>
+                            <textarea rows="3" id="deliveryNote" placeholder="Your delivery note"></textarea>
+                            <div class="validation-icon">✓</div>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="card">
+                    <h2>Payment Method</h2>
+                    <div class="payment-options">
+                        <div class="payment-option" data-payment="banking">
+                            <div class="radio-label">
+                                <input type="radio" name="payment" id="banking">
+                                <label for="banking">Online Banking (FPX)</label>
+                            </div>
+                            <div class="payment-dropdown" id="bankingDropdown">
+                                <div class="payment-sub-options">
+                                    <div class="payment-sub-option">
+                                        <div class="payment-icon">
+                                            <img src="Payment logo/maybank.png">
+                                        </div>
+                                        <span>Maybank2u</span>
+                                    </div>
+                                    <div class="payment-sub-option">
+                                        <div class="payment-icon">
+                                            <img src="Payment logo/cimb.png">
+                                        </div>
+                                        <span>CIMB Clicks</span>
+                                    </div>
+                                    <div class="payment-sub-option">
+                                        <div class="payment-icon">
+                                            <img src="Payment logo/publicbank.png">
+                                        </div>
+                                        <span>Public Bank</span>
+                                    </div>
+                                    <div class="payment-sub-option">
+                                        <div class="payment-icon">
+                                            <img src="Payment logo/bankislam.png">
+                                        </div>
+                                        <span>Bank Islam</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-option" data-payment="card">
+                            <div class="radio-label">
+                                <input type="radio" name="payment" id="card">
+                                <label for="card">Credit / Debit Card</label>
+                            </div>
+                            <div class="payment-dropdown" id="cardDropdown">
+                                <div class="payment-sub-options">
+                                    <div class="payment-sub-option">
+                                        <div class="payment-icon">
+                                            <img src="Payment logo/visa.png">
+                                        </div>
+                                        <span>VISA</span>
+                                    </div>
+                                    <div class="payment-sub-option">
+                                        <div class="payment-icon">
+                                            <img src="Payment logo/mastercard.png">
+                                        </div>
+                                        <span>MasterCard</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-option selected" data-payment="cod">
+                            <div class="radio-label">
+                                <input type="radio" name="payment" id="cod" checked>
+                                <label for="cod">Cash on Delivery (COD)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <div class="card">
+                    <h2>Order Summary</h2>
+                    
+                    <!-- Order Items -->
+                    <div class="order-item">
+                        <div class="item-image">
+                            <div class="item-image-placeholder">
+                                <img src="KRTKL/TOP/60587109.webp">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <div class="item-name">Portable Stereo Speaker</div>
+                            <div class="item-subtitle">$329.49</div>
+                        </div>
+                        <div class="item-right">
+                            <div class="quantity-controls">
+                                <button class="quantity-btn">−</button>
+                                <span class="quantity">01</span>
+                                <button class="quantity-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-item">
+                        <div class="item-image">
+                            <div class="item-image-placeholder">
+                                <img src="KRTKL/TOP/70246791.webp">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <div class="item-name">3-Type Instant Camera</div>
+                            <div class="item-subtitle">$350.00</div>
+                        </div>
+                        <div class="item-right">
+                            <div class="quantity-controls">
+                                <button class="quantity-btn">−</button>
+                                <span class="quantity">02</span>
+                                <button class="quantity-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-item">
+                        <div class="item-image">
+                            <div class="item-image-placeholder">
+                                <img src="KRTKL/TOP/77126136.webp">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <div class="item-name">3-Type Instant Camera</div>
+                            <div class="item-subtitle">$350.00</div>
+                        </div>
+                        <div class="item-right">
+                            <div class="quantity-controls">
+                                <button class="quantity-btn">−</button>
+                                <span class="quantity">02</span>
+                                <button class="quantity-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Order Totals -->
+                    <div class="order-totals">
+                        <div class="total-row">
+                            <span>Sub-total</span>
+                            <span>$959.32</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Shipping</span>
+                            <span>$99.00</span>
+                        </div>
+                        <div class="total-row grand-total">
+                            <span>Total</span>
+                            <span>$1250.32</span>
+                        </div>
+                    </div>
+
+                    <button class="confirm-btn">Confirm Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- ========================================================== FOOTER SECTION ========================================================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Desktop Layout -->
+            <div class="footer-main">
+                <div class="logo">ZARI</div>
+                
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Category</a></li>
+                        <li><a href="#">Brand</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Return & Exchanges</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Brand</h3>
+                <ul>
+                    <li><a href="#">OPT</a></li>
+                    <li><a href="#">SVG</a></li>
+                    <li><a href="#">NAISE</a></li>
+                    <li><a href="#">KRTKL</a></li>
+                    <li><a href="#">STONED</a></li>
+                </ul>
+            </div>
+        </div>
+
+            <!-- Mobile Layout -->
+            <div class="mobile-footer">
+                <div class="mobile-logo">ZARI</div>
+                
+                <div class="dropdown-section">
+                    <div class="dropdown-header" onclick="toggleDropdown(this)">
+                        <span>Shop</span>
+                        <span class="dropdown-icon">▼</span>
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Category</a></li>
+                            <li><a href="#">Brand</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            <div class="dropdown-section">
+                <div class="dropdown-header" onclick="toggleDropdown(this)">
+                    <span>Help</span>
+                    <span class="dropdown-icon">▼</span>
+                </div>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Return & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown-section">
+                <div class="dropdown-header" onclick="toggleDropdown(this)">
+                    <span>Brand</span>
+                    <span class="dropdown-icon">▼</span>
+                </div>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#">OPT</a></li>
+                        <li><a href="#">SVG</a></li>
+                        <li><a href="#">NAISE</a></li>
+                        <li><a href="#">KRTKL</a></li>
+                        <li><a href="#">STONED</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>&copy; 2025 ZARI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // Simple calendar functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        // Schedule delivery toggle
+        const scheduleToggle = document.getElementById('scheduleToggle');
+        const scheduleContent = document.getElementById('scheduleContent');
+
+        if (scheduleToggle && scheduleContent) {
+            scheduleToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                scheduleContent.classList.toggle('active');
+            });
+        }
+
+        // Calendar show/hide
+        const dateInput = document.getElementById('dateInput');
+        const calendarOverlay = document.getElementById('calendarOverlay');
+        const applyDates = document.getElementById('applyDates');
+        const clearDates = document.getElementById('clearDates');
+        const dateDisplay = document.getElementById('dateDisplay');
+
+        if (dateInput && calendarOverlay) {
+            dateInput.addEventListener('click', function() {
+                calendarOverlay.classList.add('active');
+            });
+        }
+
+        // Close calendar when clicking overlay background
+        if (calendarOverlay) {
+            calendarOverlay.addEventListener('click', function(e) {
+                if (e.target === calendarOverlay) {
+                    calendarOverlay.classList.remove('active');
+                }
+            });
+        }
+
+        // Apply dates button
+        if (applyDates && dateDisplay && calendarOverlay) {
+            applyDates.addEventListener('click', function() {
+                dateDisplay.textContent = '22 July 2025'; // Static date for demo
+                calendarOverlay.classList.remove('active');
+            });
+        }
+
+        // Clear dates button
+        if (clearDates && dateDisplay) {
+            clearDates.addEventListener('click', function() {
+                dateDisplay.textContent = 'Select date range';
+            });
+        }
+
+        // Simple day selection
+        const calendarDays = document.querySelectorAll('.calendar-day:not(.other-month)');
+        if (calendarDays.length > 0) {
+            calendarDays.forEach(day => {
+                day.addEventListener('click', function() {
+                    // Remove selected class from all days
+                    document.querySelectorAll('.calendar-day').forEach(d => {
+                        d.classList.remove('selected');
+                    });
+
+                    // Add selected class to clicked day
+                    this.classList.add('selected');
+                });
+            });
+        }
+
+        // Payment method selection with dropdown functionality
+        document.querySelectorAll('.payment-option').forEach(option => {
+            option.addEventListener('click', function(e) {
+                // Prevent event bubbling from dropdown clicks
+                if (e.target.closest('.payment-dropdown')) {
+                    return;
+                }
+
+                // Remove selected class and hide all dropdowns
+                document.querySelectorAll('.payment-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                    const dropdown = opt.querySelector('.payment-dropdown');
+                    if (dropdown) {
+                        dropdown.classList.remove('active');
+                    }
+                });
+
+                // Select current option
+                this.classList.add('selected');
+                const radioInput = this.querySelector('input[type="radio"]');
+                if (radioInput) {
+                    radioInput.checked = true;
+                }
+
+                // Show dropdown if it exists (not for COD)
+                const dropdown = this.querySelector('.payment-dropdown');
+                if (dropdown) {
+                    dropdown.classList.add('active');
+                }
+            });
+        });
+
+        // Payment sub-option selection
+        document.querySelectorAll('.payment-sub-option').forEach(subOption => {
+            subOption.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent parent click event
+
+                // Find the parent payment dropdown
+                const parentDropdown = this.closest('.payment-dropdown');
+                if (!parentDropdown) return;
+
+                // Remove selected class from all sub-options in this dropdown
+                parentDropdown.querySelectorAll('.payment-sub-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+
+                // Add selected class to clicked sub-option
+                this.classList.add('selected');
+
+                // Update the main payment option label to show selection
+                const paymentOption = this.closest('.payment-option');
+                const label = paymentOption.querySelector('label');
+                if (label) {
+                    const originalText = label.textContent.split(' - ')[0]; // Get original text before any " - "
+                    const selectedText = this.textContent.trim();
+
+                    // Update label to show selection
+                    label.textContent = `${originalText} - ${selectedText}`;
+                }
+            });
+        });
+
+        // Quantity controls
+        document.querySelectorAll('.quantity-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const isIncrement = this.textContent === '+';
+                const quantitySpan = isIncrement ?
+                    this.previousElementSibling :
+                    this.nextElementSibling;
+
+                if (!quantitySpan) return;
+
+                let quantity = parseInt(quantitySpan.textContent) || 0;
+                if (isIncrement) {
+                    quantity++;
+                } else if (quantity > 1) {
+                    quantity--;
+                }
+
+                quantitySpan.textContent = quantity.toString().padStart(2, '0');
+            });
+        });
+
+        // Confirm order
+        const confirmBtn = document.querySelector('.confirm-btn');
+        if (confirmBtn) {
+            confirmBtn.addEventListener('click', function() {
+                alert('Order confirmed! Thank you for your purchase.');
+            });
+        }
+
+        // Validation patterns
+        const validationRules = {
+            mobile: {
+                required: true,
+                pattern: /^(\+?60|0)[1-9][0-9]{7,9}$/,
+                message: 'Please enter a valid mobile number (e.g., +60 12-345-6789)'
+            },
+            email: {
+                required: true,
+                pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                message: 'Please enter a valid email address'
+            },
+            zip: {
+                required: true,
+                pattern: /^[0-9]{5,10}$/,
+                message: 'Please enter a 5-10 digit code'
+            }
+        };
+
+        // Validate field function
+        function validateField(field) {
+            const fieldId = field.id;
+            const formGroup = field.closest('.form-group');
+            if (!formGroup) return true;
+
+            const errorMessage = formGroup.querySelector('.error-message');
+            
+            // Only validate if the field has validation rules
+            if (!validationRules[fieldId]) return true;
+
+            const rules = validationRules[fieldId];
+            let isValid = true;
+            
+            // Check required
+            if (rules.required && !field.value.trim()) {
+                if (errorMessage) errorMessage.textContent = 'This field is required';
+                isValid = false;
+            }
+            // Check pattern
+            else if (rules.pattern && !rules.pattern.test(field.value.trim())) {
+                if (errorMessage) errorMessage.textContent = rules.message;
+                isValid = false;
+            }
+            
+            // Update UI
+            if (!isValid) {
+                formGroup.classList.add('error');
+                formGroup.classList.remove('success');
+                if (errorMessage) errorMessage.classList.add('show');
+            } else {
+                formGroup.classList.remove('error');
+                formGroup.classList.add('success');
+                if (errorMessage) errorMessage.classList.remove('show');
+            }
+            
+            return isValid;
+        }
+
+        // Add validation on blur for mobile, email, and zip
+        const mobileField = document.getElementById('mobile');
+        if (mobileField) {
+            mobileField.addEventListener('blur', function() {
+                validateField(this);
+            });
+        }
+        
+        const emailField = document.getElementById('email');
+        if (emailField) {
+            emailField.addEventListener('blur', function() {
+                validateField(this);
+            });
+        }
+        
+        const zipField = document.getElementById('zip');
+        if (zipField) {
+            zipField.addEventListener('blur', function() {
+                validateField(this);
+            });
+        }
+
+        // Simple validation for other required fields
+        document.querySelectorAll('input, select, textarea').forEach(field => {
+            if (!['mobile', 'email', 'zip'].includes(field.id)) {
+                field.addEventListener('blur', function() {
+                    const formGroup = this.closest('.form-group');
+                    if (!formGroup) return;
+
+                    const errorMessage = formGroup.querySelector('.error-message');
+                    
+                    if (!this.value && this.hasAttribute('required')) {
+                        formGroup.classList.add('error');
+                        if (errorMessage) {
+                            errorMessage.textContent = 'This field is required';
+                            errorMessage.classList.add('show');
+                        }
+                    } else {
+                        formGroup.classList.remove('error');
+                        if (errorMessage) errorMessage.classList.remove('show');
+                        if (this.value) {
+                            formGroup.classList.add('success');
+                        } else {
+                            formGroup.classList.remove('success');
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
