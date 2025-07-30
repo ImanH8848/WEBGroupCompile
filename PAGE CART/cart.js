@@ -23,36 +23,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartData = [
         {
             id: 1,
-            name: "KRTKL Jersey AKU",
-            type: "Jersey",
-            color: "Black",
-            size: "M",
-            price: 89,
+            name: "Loose Fit Sweatshirt",
+            type: "Sweatshirt",
+            color: "White",
+            size: "L",
+            price: 60.50,
             quantity: 1,
             stock: 12,
-            image: "../Products/KRTKL/KRTKL_Jersey AKU back.webp"
+            image: "../assets/PRODUCT/SVG/TOP/SVG_Longsleeve white front.webp"
         },
         {
             id: 2,
-            name: "OPT Hoodie Rodeo",
-            type: "Hoodie",
+            name: "Legacy Varsity",
+            type: "Jacket",
             color: "Black",
             size: "L",
-            price: 65,
-            quantity: 2,
+            price: 212,
+            quantity: 1,
             stock: 8,
-            image: "../Products/OPT/OPT_Hoodie Rodeo black back.png.webp"
+            image: "../assets/PRODUCT/SVG/TOP/SVG_Varsity.jpeg.webp"
         },
         {
             id: 3,
-            name: "STONED Jeans Black",
-            type: "Jeans",
-            color: "Black",
+            name: "Rival Jacket Co.",
+            type: "Jacket",
+            color: "Red",
             size: "36",
-            price: 55,
+            price: 145,
             quantity: 1,
             stock: 15,
-            image: "../STONED/BOTTOM/14.1_49de332d-df40-4c14-8056-65f69fdf3f1d_900x.webp"
+            image: "../assets/PRODUCT/SVG/TOP/SVG_Varsity2 front.webp"
         },
         {
             id: 4,
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             price: 90,
             quantity: 3,
             stock: 20,
-            image: "../Products/OPT/OPT_Hoodie Rodeo grey front.webp"
+            image: "../assets/PRODUCT/OPT/TOP/83733469.webp"
         },
         {
             id: 5,
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             price: 125,
             quantity: 1,
             stock: 6,
-            image: "../Products/STUSSY/STUSSY_thermal basic camo front.webp"
+            image: "../assets/PRODUCT/NAISE/TOP/Screenshot 2025-07-24 002714.png"
         },
         {
             id: 6,
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             price: 70,
             quantity: 1,
             stock: 10,
-            image: "../Products/SVG/SVG_Longsleeve white front.webp"
+            image: "../assets/PRODUCT/OPT/TOP/86308596.webp"
         },
         {
             id: 7,
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             price: 35,
             quantity: 1,
             stock: 4,
-            image: "../Products/OPT/OPT_CapBrown.webp"
+            image: "../assets/PRODUCT/OPT/ACCS/77972210.webp"
         }
     ];
 

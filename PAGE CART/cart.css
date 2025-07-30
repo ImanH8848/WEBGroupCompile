@@ -7,13 +7,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Cinzel';
-  src: url('CINZEL/Cinzel-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
     --black: #000000;
     --charcoal: #1a1a1a;
@@ -82,7 +75,6 @@ html {
 .search-input {
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  border-radius: 20px;
   border: none;
   width: 300px;
 }
@@ -172,7 +164,6 @@ nav ul li .dropdown {
   padding: 0.5rem 0;
   min-width: 150px;
   z-index: 10;
-  border-radius: 5px;
 }
 
 nav ul li .dropdown a {
@@ -310,26 +301,26 @@ nav ul li .dropdown a {
 
 /* === BACK TO TOP BUTTON === */
 .back-to-top {
-  position: fixed;
-  bottom: 3%;
-  right: 3%;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(255, 255, 255, 0.32);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.32);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+
 }
 
 .back-to-top.visible {
@@ -361,7 +352,6 @@ nav ul li .dropdown a {
     color: white;
     padding: 1.5rem 2rem;
     margin-bottom: 2rem;
-    border-radius: 15px;
     border: 1px solid var(--medium-gray);
     box-shadow: 0 8px 32px rgba(0,0,0,0.5);
 }
@@ -380,7 +370,6 @@ nav ul li .dropdown a {
 
 .cart-section {
     background: linear-gradient(135deg, var(--charcoal) 0%, var(--dark-gray) 100%);
-    border-radius: 20px;
     padding: 2rem;
     box-shadow: 0 8px 32px rgba(0,0,0,0.5);
     border: 1px solid var(--medium-gray);
@@ -429,7 +418,6 @@ nav ul li .dropdown a {
     margin-bottom: 1rem;
     border-bottom: 1px solid var(--medium-gray);
     background: linear-gradient(135deg, var(--dark-gray) 0%, var(--medium-gray) 100%);
-    border-radius: 15px;
     transition: all 0.3s ease;
     border: 1px solid var(--medium-gray);
 }
@@ -451,9 +439,9 @@ nav ul li .dropdown a {
     width: 100px;
     height: 100px;
     object-fit: cover;
-    border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     border: 2px solid var(--medium-gray);
+    background-color: #fff;
 }
 
 .item-details h3 {
@@ -487,7 +475,6 @@ nav ul li .dropdown a {
     align-items: center;
     gap: 0.5rem;
     background: var(--dark-gray);
-    border-radius: 25px;
     padding: 0.3rem;
     border: 1px solid var(--medium-gray);
 }
@@ -498,7 +485,6 @@ nav ul li .dropdown a {
     border: none;
     background: var(--white);
     color: var(--black);
-    border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -560,7 +546,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .action-btn {
     padding: 0.5rem 1rem;
     border: 1px solid var(--medium-gray);
-    border-radius: 20px;
     cursor: pointer;
     font-size: 0.8rem;
     font-weight: 500;
@@ -584,7 +569,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .summary-section {
     background: linear-gradient(135deg, var(--charcoal) 0%, var(--dark-gray) 100%);
-    border-radius: 20px;
     padding: 2rem;
     box-shadow: 0 8px 32px rgba(0,0,0,0.5);
     border: 1px solid var(--medium-gray);
@@ -634,7 +618,6 @@ input[type="number"]::-webkit-outer-spin-button {
     background: var(--white);
     color: var(--black);
     border: none;
-    border-radius: 25px;
     font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
@@ -660,7 +643,6 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-bottom: 2rem;
     padding: 1.5rem;
     background: linear-gradient(135deg, var(--dark-gray) 0%, var(--medium-gray) 100%);
-    border-radius: 15px;
     border: 1px solid var(--medium-gray);
 }
 
@@ -675,7 +657,6 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 100%;
     padding: 0.8rem;
     border: 2px solid var(--medium-gray);
-    border-radius: 10px;
     margin-bottom: 1rem;
     font-size: 1rem;
     background: var(--charcoal);
@@ -692,7 +673,6 @@ input[type="number"]::-webkit-outer-spin-button {
     flex: 1;
     padding: 0.8rem;
     border: 2px solid var(--medium-gray);
-    border-radius: 10px;
     font-size: 1rem;
     background: var(--charcoal);
     color: var(--white);
@@ -707,7 +687,6 @@ input[type="number"]::-webkit-outer-spin-button {
     background: var(--white);
     color: var(--black);
     border: none;
-    border-radius: 10px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -722,7 +701,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .voucher-status {
     font-size: 0.9rem;
     padding: 0.5rem;
-    border-radius: 8px;
     text-align: center;
     font-weight: 500;
 }
@@ -742,7 +720,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .delivery-section {
     padding: 1.5rem;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
-    border-radius: 15px;
     border: 1px solid var(--medium-gray);
 }
 
@@ -815,13 +792,12 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 ::-webkit-scrollbar-thumb {
   background: #444;
-  border-radius: 4px;
 }
 
 /* ============================= FOOTER ============================= */
 .footer {
     position: relative;
-    background-image: url('Author’s\ Inst_\ @_agaze_.jpg');
+    background-image: url('../assets/HOME\ ASSETS/bg-footer.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
