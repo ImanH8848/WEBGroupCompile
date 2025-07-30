@@ -298,45 +298,45 @@ nav ul li .dropdown a {
 }
 
 /* === BACK TO TOP BUTTON === */
-        .back-to-top {
-            position: fixed;
-            bottom: 3%;
-            right: 3%;
-            width: 50px;
-            height: 50px;
-            background-color: rgba(255, 255, 255, 0.32);
-            backdrop-filter: blur(7px);
-            -webkit-backdrop-filter: blur(7px);
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(20px);
-        }
+.back-to-top {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.32);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
 
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
-        .back-to-top:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 25px rgba(255, 255, 255, 0.15);
-        }
+.back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.15);
+}
 
-        .back-to-top svg {
-            width: 24px;
-            height: 24px;
-            fill: #ffffff;
-        }
+.back-to-top svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
 
 /* ============================= LOGO CAROUSELL ============================= */
 .logo-marquee {

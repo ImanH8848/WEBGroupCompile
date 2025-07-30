@@ -45,14 +45,14 @@ html {
   scroll-behavior: smooth;
 }
 
-/* === CUSTOM HEADER NAVBAR === */
+/* ==================== NAVBAR STYLES ==================== */
 .custom-header {
   background-color: var(--charcoal);
   color: white;
   padding: 1.2rem 2rem;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000; /* Increased from 999 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.468);
 }
 
@@ -70,20 +70,13 @@ html {
   transform: translateX(-50%);
 }
 
-.bottom-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-  position: relative;
-}
-
 .left-logo .logo {
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: 2.5rem;
+  font-weight: 550;
   color: white;
   letter-spacing: 1px;
+  padding-left: 7px;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .search-input {
@@ -91,33 +84,7 @@ html {
   padding: 0.5rem 1rem;
   border-radius: 20px;
   border: none;
-}
-
-.nav-links {
-  font-size: 1.1rem;
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-.nav-links li {
-  position: relative;
-}
-
-.nav-links li a {
-  font-size: 1.1rem;
-  text-decoration: none;
-  color: white;
-  padding: 0.5rem;
-  display: block;
-}
-
-.nav-links li a:hover {
-  color: var(--sand);
-  text-decoration: underline;
+  width: 300px;
 }
 
 .nav-icons button,
@@ -143,7 +110,55 @@ html {
   cursor: pointer;
 }
 
-/* === DROPDOWN MENU === */
+.nav ul li .dropdown a:hover {
+  background-color: var(--sand);
+  color: var(--black);
+}
+
+/* ==================== MAIN NAVIGATION ==================== */
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.nav-links {
+  font-size: 1.1rem;
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.nav-links li {
+  position: relative;
+  list-style: none;
+}
+
+.nav-links li a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  display: block;
+}
+
+.nav-links li a:hover {
+  color: var(--sand);
+  text-decoration: underline;
+}
+
+.nav-icons button:hover {
+  color: var(--sand);
+  text-decoration: underline;
+}
+
+/* ==================== DROPDOWN MENUS ==================== */
 nav ul li:hover .dropdown {
   display: block;
 }
@@ -168,50 +183,170 @@ nav ul li .dropdown a {
   text-decoration: none;
 }
 
-nav ul li .dropdown a:hover {
-  background-color: var(--sand);
-  color: var(--black);
+/* ==================== HAMBURGER MENU ==================== */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  z-index: 1002;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation when active */
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ==================== MOBILE STYLES ==================== */
+@media (max-width: 768px) {
+  .center-search {
+    position: static;
+    order: 3;
+    transform: none;
+    width: 100%;
+    margin-top: 1rem;
+    display: none;
+  }
+  
+  .search-input {
+    width: 100%;
+  }
+
+  .left-logo .logo {
+    font-size: 1.5rem; /* Reduced from 2rem */
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-header {
+    padding: 1rem;
+  }
+  
+  .top-row {
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+  
+  .hamburger {
+    display: block;
+    order: 1;
+  }
+  
+  .left-logo {
+    order: 2;
+    margin-right: auto;
+  }
+
+  .left-logo .logo {
+    font-size: 1.25rem; /* Even smaller for very small screens */
+  }
+  
+  .nav-icons {
+    order: 3;
+  }
+  
+  .bottom-row {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: var(--charcoal);
+    padding: 1rem;
+    margin-top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.468);
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    z-index: 1001;
+  }
+  
+  .bottom-row.active {
+    display: block;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  nav ul li .dropdown {
+    position: static;
+    display: none;
+    padding-left: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 0.5rem;
+  }
+  
+  nav ul li.active .dropdown {
+    display: block;
+  }
+  
+  /* Prevent body scroll when menu is open */
+  body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
 }
 
 /* === BACK TO TOP BUTTON === */
 .back-to-top {
-    position: fixed;
-    bottom: 3%;
-    right: 3%;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(255, 255, 255, 0.32);
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.32);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
 }
 
 .back-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .back-to-top:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 25px rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.15);
 }
 
 .back-to-top svg {
-    width: 24px;
-    height: 24px;
-    fill: #ffffff;
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
 }
 
 /* ============================= CART SECTION ============================= */
