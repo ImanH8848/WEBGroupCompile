@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Bebas Neue';
-  src: url('BEBAS/Bebas-Regular.ttf') format('truetype');
+  src: url('../assets/BEBAS/Bebas-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -68,15 +68,15 @@ body {
 }
 
 .top {
-  background-image: url('./categories-pic/TOP.jpg');
+  background-image: url('../assets/HOME ASSETS/categories-pic/TOP.jpg');
 }
 
 .bottom {
-  background-image: url('./categories-pic/BOTTOM.jpg');
+  background-image: url('../assets/HOME ASSETS/categories-pic/BOTTOM.jpg');
 }
 
 .accessories {
-  background-image: url('./categories-pic/ACESSORIES.jpg');
+  background-image: url('../assets/HOME ASSETS/categories-pic/ACESSORIES.jpg');
 }
 
 @media screen and (max-width: 768px) {

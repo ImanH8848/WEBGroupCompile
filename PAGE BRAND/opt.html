@@ -4,12 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZARI - Urban Streetwear</title>
-  <link rel="stylesheet" href="brandstyle.css" />
+  <link rel="stylesheet" href="brand.css" />
+  <script defer src="../PAGE HOME/home.js"></script>
 </head>
 <body>
   <!-- NAVBAR -->
   <header class="custom-header">
     <div class="top-row">
+      <button class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
       <div class="left-logo">
         <div class="logo">ZARI</div>
       </div>
@@ -17,145 +23,145 @@
         <input type="text" placeholder="Search products..." class="search-input" />
       </div>
       <div class="nav-icons">
-        <button onclick="window.location.href='web_login.html'">Login</button>
-        <button>Cart</button>
+        <button onclick="window.location.href='../PAGE LOGIN/login.html'">Login</button>
+        <button onclick="window.location.href='../PAGE CART/cart.html'">Cart</button>
       </div>
     </div>
     <div class="bottom-row">
       <nav>
         <ul class="nav-links">
           <li>
-            <a href="../web_index.html">Home</a>
+            <a href="../PAGE HOME/home_index.html">Home</a>
             <ul class="dropdown">
-              <li><a href="../web_index.html">ZARI</a></li>
-              <li><a href="../categories.html">CATEGORIES</a></li>
-              <li><a href="#">NEW ARRIVAL</a></li>
-              <li><a href="#">MOST WANTED</a></li>
-              <li><a href="#">BRANDS YOU LOVE</a></li>
+              <li><a href="../PAGE HOME/home_index.html#zari">ZARI</a></li>
+              <li><a href="../PAGE HOME/home_index.html#category">CATEGORIES</a></li>
+              <li><a href="../PAGE HOME/home_index.html#most-wanted">MOST WANTED</a></li>
+              <li><a href="../PAGE HOME/home_index.html#new-arrival">NEW ARRIVAL</a></li>
+              <li><a href="../PAGE HOME/home_index.html#brands">BRANDS YOU LOVE</a></li>
             </ul>
           </li>
           <li>
-          <a href="./categories.html">Categories</a>
+          <a href="#">Categories</a>
           <ul class="dropdown">
-            <li><a href="./CategoryDisp/top.html">Tops</a></li>
-            <li><a href="./CategoryDisp/bottom.html">Bottoms</a></li>
-            <li><a href="./CategoryDisp/acessories.html">Accessories</a></li>
+            <li><a href="../PAGE CATEGORY/top.html">Tops</a></li>
+            <li><a href="../PAGE CATEGORY/bottom.html">Bottoms</a></li>
+            <li><a href="../PAGE CATEGORY/acessories.html">Accessories</a></li>
           </ul>
         </li>
         <li>
           <a href="#">Brands</a>
           <ul class="dropdown">
-            <li><a href="../BrandsDisp/opt.html">OPT</a></li>
-            <li><a href="../BrandsDisp/svg.html">SVG</a></li>
-            <li><a href="../BrandsDisp/naise.html">NAISE</a></li>
-            <li><a href="../BrandsDisp/krtkl.html">KRTKL</a></li>
-            <li><a href="../BrandsDisp/stoned.html">STONED & CO</a></li>
+            <li><a href="../PAGE BRAND/opt.html">OPT</a></li>
+            <li><a href="../PAGE BRAND/svg.html">SVG</a></li>
+            <li><a href="../PAGE BRAND/naise.html">NAISE</a></li>
+            <li><a href="../PAGE BRAND/krtkl.html">KRTKL</a></li>
+            <li><a href="../PAGE BRAND/stoned.html">STONED & CO</a></li>
           </ul>
-          <li><a href="../web_contact.html">Contact</a></li>
-          <li><a href="../web_about.html">About Us</a></li>
+          <li><a href="../PAGE CONTACT/contact.html">Contact</a></li>
+          <li><a href="../PAGE ABOUT/about.html">About Us</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <section class="banner">
-    <img src="opt.webp" alt="Top Category Banner" class="banner-image" style="object-fit: cover; object-position: center 28%; height: 100%; width: 100%;"/>
-    <img src="../brand-logo-white/opt.svg" alt="Company Logo" class="company-logo" />
+    <img src="../assets/BRAND ASSETS/opt.webp" alt="Top Category Banner" class="banner-image" style="object-fit: cover; object-position: center 28%; height: 100%; width: 100%;"/>
+    <img src="../assets/HOME ASSETS/brand-logo/opt.svg" alt="Company Logo" class="company-logo" />
   </section>
 
 
   <section class="product-grid">
     <div class="product-card">
-      <img src="../OPT/TOP/68296619.webp" alt="OPT Product">
-      <div class="price-tag">$32</div>
+      <img src="../assets/PRODUCT/OPT/TOP/68296619.webp" alt="OPT Product">
+      <div class="price-tag">RM32</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/TOP/72943210.webp" alt="OPT Product">
-      <div class="price-tag">$29</div>
+      <img src="../assets/PRODUCT/OPT/TOP/72943210.webp" alt="OPT Product">
+      <div class="price-tag">RM29</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/TOP/72943216.webp" alt="OPT Product">
-      <div class="price-tag">$35</div>
+      <img src="../assets/PRODUCT/OPT/TOP/72943216.webp" alt="OPT Product">
+      <div class="price-tag">RM35</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/TOP/75336698.webp" alt="OPT Product">
-      <div class="price-tag">$27</div>
+      <img src="../assets/PRODUCT/OPT/TOP/75336698.webp" alt="OPT Product">
+      <div class="price-tag">RM27</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/ACCS/75481032.webp" alt="OPT Product">
-      <div class="price-tag">$30</div>
+      <img src="../assets/PRODUCT/OPT/ACCS/75481032.webp" alt="OPT Product">
+      <div class="price-tag">RM30</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/ACCS/75694631.webp" alt="OPT Product">
-      <div class="price-tag">$33</div>
+      <img src="../assets/PRODUCT/OPT/ACCS/75694631.webp" alt="OPT Product">
+      <div class="price-tag">RM33</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/BOTTOM/75336689.webp" alt="OPT Product">
-      <div class="price-tag">$28</div>
+      <img src="../assets/PRODUCT/OPT/BOTTOM/75336689.webp" alt="OPT Product">
+      <div class="price-tag">RM28</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/BOTTOM/77973283.webp" alt="OPT Product">
-      <div class="price-tag">$31</div>
+      <img src="../assets/PRODUCT/OPT/BOTTOM/77973283.webp" alt="OPT Product">
+      <div class="price-tag">RM31</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/ACCS/77972087.webp" alt="OPT Product">
-      <div class="price-tag">$36</div>
+      <img src="../assets/PRODUCT/OPT/ACCS/77972087.webp" alt="OPT Product">
+      <div class="price-tag">RM36</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/ACCS/77972210.webp" alt="OPT Product">
-      <div class="price-tag">$34</div>
+      <img src="../assets/PRODUCT/OPT/ACCS/77972210.webp" alt="OPT Product">
+      <div class="price-tag">RM34</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/TOP/77972359.webp" alt="OPT Product">
-      <div class="price-tag">$26</div>
+      <img src="../assets/PRODUCT/OPT/TOP/77972359.webp" alt="OPT Product">
+      <div class="price-tag">RM26</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/TOP/77972986.webp" alt="OPT Product">
-      <div class="price-tag">$30</div>
+      <img src="../assets/PRODUCT/OPT/TOP/77972986.webp" alt="OPT Product">
+      <div class="price-tag">RM30</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/TOP/83733469.webp" alt="OPT Product">
-      <div class="price-tag">$30</div>
+      <img src="../assets/PRODUCT/OPT/TOP/83733469.webp" alt="OPT Product">
+      <div class="price-tag">RM30</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/BOTTOM/78005310.webp" alt="OPT Product">
-      <div class="price-tag">$28</div>
+      <img src="../assets/PRODUCT/OPT/BOTTOM/78005310.webp" alt="OPT Product">
+      <div class="price-tag">RM28</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/ACCS/80428408.webp" alt="OPT Product">
-      <div class="price-tag">$30</div>
+      <img src="../assets/PRODUCT/OPT/ACCS/80428408.webp" alt="OPT Product">
+      <div class="price-tag">RM30</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/ACCS/81105174.webp" alt="OPT Product">
-      <div class="price-tag">$30</div>
+      <img src="../assets/PRODUCT/OPT/ACCS/81105174.webp" alt="OPT Product">
+      <div class="price-tag">RM30</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/ACCS/81135104.webp" alt="OPT Product">
-      <div class="price-tag">$30</div>
+      <img src="../assets/PRODUCT/OPT/ACCS/81135104.webp" alt="OPT Product">
+      <div class="price-tag">RM30</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/BOTTOM/81266227.webp" alt="OPT Product">
-      <div class="price-tag">$28</div>
+      <img src="../assets/PRODUCT/OPT/BOTTOM/81266227.webp" alt="OPT Product">
+      <div class="price-tag">RM28</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/TOP/83733500.webp" alt="OPT Product">
-      <div class="price-tag">$30</div>
+      <img src="../assets/PRODUCT/OPT/TOP/83733500.webp" alt="OPT Product">
+      <div class="price-tag">RM30</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/BOTTOM/88190253.webp" alt="OPT Product">
-      <div class="price-tag">$28</div>
+      <img src="../assets/PRODUCT/OPT/BOTTOM/88190253.webp" alt="OPT Product">
+      <div class="price-tag">RM28</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/ACCS/81483489.webp" alt="OPT Product">
-      <div class="price-tag">$30</div>
+      <img src="../assets/PRODUCT/OPT/ACCS/81483489.webp" alt="OPT Product">
+      <div class="price-tag">RM30</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/TOP/86308596.webp" alt="OPT Product">
-      <div class="price-tag">$30</div>
+      <img src="../assets/PRODUCT/OPT/TOP/86308596.webp" alt="OPT Product">
+      <div class="price-tag">RM30</div>
     </div>
     <div class="product-card">
-      <img src="../OPT/ACCS/82219914.webp" alt="OPT Product">
-      <div class="price-tag">$30</div>
+      <img src="../assets/PRODUCT/OPT/ACCS/82219914.webp" alt="OPT Product">
+      <div class="price-tag">RM30</div>
     </div>
   </section>
 
@@ -169,6 +175,7 @@
                 <div class="footer-section">
                     <h3>Shop</h3>
                     <ul>
+
                         <li><a href="../PAGE HOME/home_index.html">Home</a></li>
                         <li><a href="../PAGE CATEGORY/top.html">Category</a></li>
                         <li><a href="../PAGE BRAND/svg.html">Brand</a></li>
@@ -197,6 +204,19 @@
                     <li><a href="../PAGE BRAND/krtkl.html">KRTKL</a></li>
                     <li><a href="../PAGE BRAND/stoned.html">STONED & CO</a></li>
                 </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="../PAGE HOME/home_index.html#">FAQ</a></li>
+                        <li><a href="../PAGE HOME/home_index.html#">Shipping & Delivery</a></li>
+                        <li><a href="../PAGE HOME/home_index.html#">Return & Exchanges</a></li>
+                        <li><a href="../PAGE HOME/home_index.html#">Size Guide</a></li>
+                        <li><a href="../PAGE HOME/home_index.html#">Track Order</a></li>
+                    </ul>
+                </div>
+
             </div>
         </div>
 
@@ -220,11 +240,12 @@
                     </div>
                 </div>
 
+
             <div class="dropdown-section">
                 <div class="dropdown-header" onclick="toggleDropdown(this)">
                     <span>Help</span>
                     <span class="dropdown-icon">▼</span>
-                </div>
+                    </div>
                 <div class="dropdown-content">
                     <ul>
                         <li>FAQ</li>
@@ -235,6 +256,7 @@
                     </ul>
                 </div>
             </div>
+
 
             <div class="dropdown-section">
                 <div class="dropdown-header" onclick="toggleDropdown(this)">
