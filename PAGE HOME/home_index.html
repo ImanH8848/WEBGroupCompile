@@ -4,71 +4,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZARI - Urban Streetwear</title>
-  <link rel="stylesheet" href="web_style.css" />
+  <link rel="stylesheet" href="home.css" />
   <link rel="stylesheet" href="mostwanted.css" />
   <link rel="stylesheet" href="categories.css" />
-  <script defer src="web_script.js"></script>
+  <script defer src="home.js"></script>
 </head>
 <body>
 
 <!-- ========================================================== NAVBAR ========================================================== -->
-<header class="custom-header">
-  <div class="top-row">
-    <button class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-    
-    <div class="left-logo">
-      <div class="logo">Z A R I</div>
+<!-- NAVBAR -->
+  <header class="custom-header">
+    <div class="top-row">
+      <div class="left-logo">
+        <div class="logo">ZARI</div>
+      </div>
+      <div class="center-search">
+        <input type="text" placeholder="Search products..." class="search-input" />
+      </div>
+      <div class="nav-icons">
+        <button onclick="window.location.href='../PAGE LOGIN/login.html'">Login</button>
+        <button>Cart</button>
+      </div>
     </div>
-
-    <div class="center-search">
-      <input type="text" placeholder="Search products..." class="search-input" />
-    </div>
-
-    <div class="nav-icons">
-      <button onclick="window.location.href='web_login.html'">Login</button>
-      <button onclick="window.location.href='cart/web_cart.html'">Cart</button>
-    </div>
-  </div>
-
     <div class="bottom-row">
       <nav>
         <ul class="nav-links">
           <li>
-            <a href="web_index.html">Home</a>
+            <a href="../PAGE HOME/home_index.html">Home</a>
             <ul class="dropdown">
-              <li><a href="#zari">ZARI</a></li>
-              <li><a href="#category">CATEGORIES</a></li>
-              <li><a href="#most-wanted">MOST WANTED</a></li>
-              <li><a href="#new-arrival">NEW ARRIVAL</a></li>
-              <li><a href="#brands">BRANDS YOU LOVE</a></li>
+              <li><a href="../PAGE HOME/home_index.html#zari">ZARI</a></li>
+              <li><a href="../PAGE HOME/home_index.html#category">CATEGORIES</a></li>
+              <li><a href="../PAGE HOME/home_index.html#most-wanted">MOST WANTED</a></li>
+              <li><a href="../PAGE HOME/home_index.html#new-arrival">NEW ARRIVAL</a></li>
+              <li><a href="../PAGE HOME/home_index.html#brands">BRANDS YOU LOVE</a></li>
             </ul>
           </li>
           <li>
-          <a href="#category">Categories</a>
-
+          <a href="#">Categories</a>
           <ul class="dropdown">
-            <li><a href="./CategoryDisp/top.html">TOPS</a></li>
-            <li><a href="./CategoryDisp/bottom.html">BOTTOMS</a></li>
-            <li><a href="./CategoryDisp/acessories.html">ACCESSORIES</a></li>
+            <li><a href="../PAGE CATEGORY/top.html">Tops</a></li>
+            <li><a href="../PAGE CATEGORY/bottom.html">Bottoms</a></li>
+            <li><a href="../PAGE CATEGORY/acessories.html">Accessories</a></li>
           </ul>
         </li>
         <li>
           <a href="#">Brands</a>
           <ul class="dropdown">
-            <li><a href="../WEB1201_Assignment/BrandsDisp/opt.html">OPT</a></li>
-            <li><a href="web_index.html#svg">SVG</a></li>
-            <li><a href="web_index.html#svg">NAISE</a></li>
-            <li><a href="web_index.html#svg">KRTKL</a></li>
-            <li><a href="web_index.html#stoned">STONED & CO</a></li>
+            <li><a href="../PAGE BRAND/opt.html">OPT</a></li>
+            <li><a href="../PAGE BRAND/svg.html">SVG</a></li>
+            <li><a href="../PAGE BRAND/naise.html">NAISE</a></li>
+            <li><a href="../PAGE BRAND/krtkl.html">KRTKL</a></li>
+            <li><a href="../PAGE BRAND/stoned.html">STONED & CO</a></li>
           </ul>
-        </li>
-
-          <li><a href="./web_contact.html">Contact</a></li>
-          <li><a href="./web_about.html">About Us</a></li>
+          <li><a href="../PAGE CONTACT/contact.html">Contact</a></li>
+          <li><a href="../PAGE ABOUT/about.html">About Us</a></li>
         </ul>
       </nav>
     </div>
@@ -82,18 +71,18 @@
     </button>
  
 <!-- ========================================================== HERO SECTION ========================================================== -->
-  <section id="zari" class="hero-section" style="background-image: url('bg-hero.jpg');">
+  <section id="zari" class="hero-section" style="background-image: url('../assets/HOME ASSETS/bg-hero.jpg');">
     <h1>Z A R I</h1>
   </section>
 
 <!-- ========================================================== LOGO CAROUSELL ========================================================== -->
   <section class="logo-marquee">
   <div class="logo-track">
-    <img src="LogoCarousell.png" alt="Brand Logos 1">
-    <img src="LogoCarousell.png" alt="Brand Logos 2">
-    <img src="LogoCarousell.png" alt="Brand Logos 3">
-    <img src="LogoCarousell.png" alt="Brand Logos 4">
-    <img src="LogoCarousell.png" alt="Brand Logos 5">
+    <img src="../assets/HOME ASSETS/brand-logo/LogoCarousell.png" alt="Brand Logos 1">
+    <img src="../assets/HOME ASSETS/brand-logo/LogoCarousell.png" alt="Brand Logos 2">
+    <img src="../assets/HOME ASSETS/brand-logo/LogoCarousell.png" alt="Brand Logos 3">
+    <img src="../assets/HOME ASSETS/brand-logo/LogoCarousell.png" alt="Brand Logos 4">
+    <img src="../assets/HOME ASSETS/brand-logo/LogoCarousell.png" alt="Brand Logos 5">
   </div>
 </section>
 
@@ -102,19 +91,19 @@
     <div class="category-column top">
       <div class="overlay">
         <h2>TOP</h2>
-        <a href="./CategoryDisp/top.html" class="category-button">Explore Tops</a>
+        <a href="../PAGE CATEGORY/top.html" class="category-button">Explore Tops</a>
       </div>
     </div>
     <div class="category-column bottom">
       <div class="overlay">
         <h2>BOTTOM</h2>
-        <a href="./CategoryDisp/BOTTOM.html" class="category-button">Explore Bottoms</a>
+        <a href="../PAGE CATEGORY/BOTTOM.html" class="category-button">Explore Bottoms</a>
       </div>
     </div>
     <div class="category-column accessories">
       <div class="overlay">
         <h2>ACCESSORIES</h2>
-        <a href="./CategoryDisp/acessories.html" class="category-button">Explore Accessories</a>
+        <a href="../PAGE CATEGORY/acessories.html" class="category-button">Explore Accessories</a>
       </div>
     </div>
   </section>
@@ -130,11 +119,11 @@
         <div class="carousel-track" id="track">
             <!-- Card 1 -->
             <div class="carousel-card card-1">
-                <img class="card-bg" src="../WEB1201_Assignment/MostWantedTrial/images/_optn2.jpg" alt="Background">
+                <img class="card-bg" src="../assets/HOME ASSETS/most-wanted-pic/_optn2.jpg" alt="Background">
                 <div class="most-wanted-tag">Most Wanted: OPT.</div>
                 <div class="product-images">
                     <div class="product-image-left">
-                        <img src="../WEB1201_Assignment/MostWantedTrial/images/opt1cc.jpg" alt="Product detail" style="filter: saturate(0);">
+                        <img src="../assets/HOME ASSETS/most-wanted-pic/opt1cc.jpg" alt="Product detail" style="filter: saturate(0);">
                         <div class="product-description">
                             <span class="product-description-top">Respect Comes First</span>
                             Inspired by 19th-century cowboy culture, OPT brings the raw energy of a horse to life.
@@ -142,7 +131,7 @@
                         </div>
                     </div>
                     <div class="product-image-right">
-                        <img src="../WEB1201_Assignment/MostWantedTrial/images/opt01.jpg" alt="Product">
+                        <img src="../assets/HOME ASSETS/most-wanted-pic/opt01.jpg" alt="Product">
                         <div class="product-name">RODEO</div>
                     </div>
                 </div>
@@ -151,11 +140,11 @@
 
             <!-- Card 2 -->
             <div class="carousel-card card-2">
-                <img class="card-bg" src="../WEB1201_Assignment/MostWantedTrial/images/stn2.jpg" alt="Background">
+                <img class="card-bg" src="../assets/HOME ASSETS/most-wanted-pic/stn2.jpg" alt="Background">
                 <div class="most-wanted-tag">MOST WANTED: STONED N CO</div>
                 <div class="product-images">
                     <div class="product-image-left">
-                        <img src="../WEB1201_Assignment/MostWantedTrial/images/stn1c.jpg" alt="Product detail" style="filter: saturate(0);">
+                        <img src="../assets/HOME ASSETS/most-wanted-pic/stn1c.jpg" alt="Product detail" style="filter: saturate(0);">
                         <div class="product-description">
                             <span class="product-description-top">LEGACY STITCHED</span>
                             This isn't just streetwear. Its legacy is stitched in every thread.
@@ -163,7 +152,7 @@
                         </div>
                     </div>
                     <div class="product-image-right">
-                        <img src="../WEB1201_Assignment/MostWantedTrial/images/stn3.jpg" alt="Product">
+                        <img src="../assets/HOME ASSETS/most-wanted-pic/stn3.jpg" alt="Product">
                         <div class="product-name">EMPIRE</div>
                     </div>
                 </div>
@@ -172,11 +161,11 @@
 
             <!-- Card 3 -->
             <div class="carousel-card card-3">
-                <img class="card-bg" src="../WEB1201_Assignment/MostWantedTrial/images/krtkl22.jpg" alt="Background">
+                <img class="card-bg" src="../assets/HOME ASSETS/most-wanted-pic/krtkl22.jpg" alt="Background">
                 <div class="most-wanted-tag">MOST WANTED: KRTKL</div>
                 <div class="product-images">
                     <div class="product-image-left">
-                        <img src="../WEB1201_Assignment/MostWantedTrial/images/krtkl11c.jpg" alt="Product detail" style="filter: saturate(0);">
+                        <img src="../assets/HOME ASSETS/most-wanted-pic/krtkl11c.jpg" alt="Product detail" style="filter: saturate(0);">
                         <div class="product-description">
                             <span class="product-description-top">FEEL THE TORNADO</span>
                             A collection with feels. Be the THORNADO, strike the feel.
@@ -184,7 +173,7 @@
                         </div>
                     </div>
                     <div class="product-image-right">
-                        <img src="../WEB1201_Assignment/MostWantedTrial/images/krtkl33.jpg" alt="Product">
+                        <img src="../assets/HOME ASSETS/most-wanted-pic/krtkl33.jpg" alt="Product">
                         <div class="product-name">HUE MODE</div>
                     </div>
                 </div>
@@ -193,11 +182,11 @@
 
             <!-- Card 4 -->
             <div class="carousel-card card-4">
-                <img class="card-bg" src="../WEB1201_Assignment/MostWantedTrial/images/naise22.jpg" alt="Background">
+                <img class="card-bg" src="../assets/HOME ASSETS/most-wanted-pic/naise22.jpg" alt="Background">
                 <div class="most-wanted-tag">MOST WANTED: NAISE</div>
                 <div class="product-images">
                     <div class="product-image-left">
-                        <img src="../WEB1201_Assignment/MostWantedTrial/images/naise11c.jpg" alt="Product detail" style="filter: saturate(0);">
+                        <img src="../assets/HOME ASSETS/most-wanted-pic/naise11c.jpg" alt="Product detail" style="filter: saturate(0);">
                         <div class="product-description">
                             <span class="product-description-top">CORDUROY COMFORT</span>
                             Stylish with Corduroy Collar. Revolutionary comfort meets street-ready style.
@@ -205,7 +194,7 @@
                         </div>
                     </div>
                     <div class="product-image-right">
-                        <img src="../WEB1201_Assignment/MostWantedTrial/images/naise33.jpg" alt="Product">
+                        <img src="../assets/HOME ASSETS/most-wanted-pic/naise33.jpg" alt="Product">
                         <div class="product-name">DMITRI</div>
                     </div>
                 </div>
@@ -214,11 +203,11 @@
 
             <!-- Card 5 -->
             <div class="carousel-card card-5">
-                <img class="card-bg" src="../WEB1201_Assignment/MostWantedTrial/images/svg22.jpg" alt="Background">
+                <img class="card-bg" src="../assets/HOME ASSETS/most-wanted-pic/svg22.jpg" alt="Background">
                 <div class="most-wanted-tag">MOST WANTED: SVG</div>
                 <div class="product-images">
                     <div class="product-image-left">
-                        <img src="../WEB1201_Assignment/MostWantedTrial/images/svg11c.jpg" alt="Product detail" style="filter: saturate(0);">
+                        <img src="../assets/HOME ASSETS/most-wanted-pic/svg11c.jpg" alt="Product detail" style="filter: saturate(0);">
                         <div class="product-description">
                             <span class="product-description-top">PREMIUM CRAFT</span>
                             Signature collection featuring premium craftsmanship and innovative materials.
@@ -226,7 +215,7 @@
                         </div>
                     </div>
                     <div class="product-image-right">
-                        <img src="../WEB1201_Assignment/MostWantedTrial/images/svg33.jpg" alt="Product">
+                        <img src="../assets/HOME ASSETS/most-wanted-pic/svg33.jpg" alt="Product">
                         <div class="product-name">CORDOUIRE</div>
                     </div>
                 </div>
@@ -243,9 +232,9 @@
   <section id="new-arrival" class="arrival">
     <div class="wrapper-arrival">
       <div class="wrapper-pic">
-        <img src="arrival-pic/1.png">
-        <img src="arrival-pic/2.png">
-        <img src="arrival-pic/3.png">
+        <img src="../assets/HOME ASSETS/arrival-pic/1.png">
+        <img src="../assets/HOME ASSETS/arrival-pic/2.png">
+        <img src="../assets/HOME ASSETS/arrival-pic/3.png">
       </div>
       <div class="text-caption">
         COLLECTION VOL . 1
@@ -262,24 +251,24 @@
     <div class="gallery-wrapper">
       <div class="wrapper-new-collection">
         <div class="model-wrapper">
-          <img src="SVG/MODEL/model2.jpg" class="overlay-img">
-          <img src="SVG/MODEL/model1.jpg" class="base-img">
+          <img src="../assets/PRODUCT/SVG/MODEL/model2.jpg" class="overlay-img">
+          <img src="../assets/PRODUCT/SVG/MODEL/model1.jpg" class="base-img">
           <button class="buy-btn">BUY</button>
         </div>
       </div>
 
       <div class="wrapper-new-collection">
         <div class="model-wrapper">
-          <img src="KRTKL/MODEL/model2.jpg" class="overlay-img">
-          <img src="KRTKL/MODEL/model1.jpg" class="base-img">
+          <img src="../assets/PRODUCT/KRTKL/MODEL/model2.jpg" class="overlay-img">
+          <img src="../assets/PRODUCT/KRTKL/MODEL/model1.jpg" class="base-img">
           <button class="buy-btn">BUY</button>
         </div>
       </div>
 
       <div class="wrapper-new-collection">
         <div class="model-wrapper">
-          <img src="STONED/MODEL/model2.jpg" class="overlay-img">
-          <img src="STONED/MODEL/model1.jpg" class="base-img">
+          <img src="../assets/PRODUCT/STONED/MODEL/model2.jpg" class="overlay-img">
+          <img src="../assets/PRODUCT/STONED/MODEL/model1.jpg" class="base-img">
           <button class="buy-btn">BUY</button>
         </div>
       </div>
@@ -300,14 +289,14 @@
             </div>
             <div class="wrapper-box">
                 <!--OPT-->
-                <a href="../WEB1201_Assignment/BrandsDisp/opt.html">
+                <a href="../PAGE BRAND/opt.html">
                     <div class="box">
                         <div class="overlay">
-                            <img src="brand-logo-white/opt.svg" alt="OPT Logo">
+                            <img src="../assets/HOME ASSETS/brand-logo/opt.svg" alt="OPT Logo">
                         </div>
                         <div class="video-wrapper">
                             <video autoplay muted playsinline preload="auto" loop>
-                                <source src="OPT/VID OPT.mp4" type="video/mp4">
+                                <source src="../assets/PRODUCT/OPT/VID OPT.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="text">
@@ -317,14 +306,14 @@
                     </div>
                 </a>
                 <!--SVG-->
-                <a href="../WEB1201_Assignment/BrandsDisp/svg.html">
+                <a href="../PAGE BRAND/svg.html">
                     <div class="box">
                         <div class="overlay">
-                            <img src="brand-logo-white/svg.svg" alt="SVG Logo">
+                            <img src="../assets/HOME ASSETS/brand-logo/svg.svg" alt="SVG Logo">
                         </div>
                         <div class="video-wrapper">
                             <video autoplay muted playsinline preload="auto" loop>
-                                <source src="SVG/VID SVG.mp4" type="video/mp4">
+                                <source src="../assets/PRODUCT/SVG/VID SVG.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="text">
@@ -334,14 +323,14 @@
                     </div>
                 </a>
                 <!--NAISE-->
-                <a href="../WEB1201_Assignment/BrandsDisp/naise.html">
+                <a href="../PAGE BRAND/naise.html">
                     <div class="box">
                         <div class="overlay">
-                            <img src="brand-logo-white/naise.svg" alt="NAISE Logo">
+                            <img src="../assets/HOME ASSETS/brand-logo/naise.svg" alt="NAISE Logo">
                         </div>
                         <div class="video-wrapper">
                             <video autoplay muted playsinline preload="auto" loop>
-                                <source src="NAISE/VID NAISE.mp4" type="video/mp4">
+                                <source src="../assets/PRODUCT/NAISE/VID NAISE.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="text">
@@ -351,14 +340,14 @@
                     </div>
                 </a>
                 <!--KRTKL-->
-                <a href="../WEB1201_Assignment/BrandsDisp/krtkl.html">
+                <a href="../PAGE BRAND/krtkl.html">
                     <div class="box">
                         <div class="overlay">
-                            <img src="brand-logo-white/krtkl.svg" alt="KRTKL Logo">
+                            <img src="../assets/HOME ASSETS/brand-logo/krtkl.svg" alt="KRTKL Logo">
                         </div>
                         <div class="video-wrapper">
                             <video autoplay muted playsinline preload="auto" loop>
-                                <source src="KRTKL/VID KRTKL.mp4" type="video/mp4">
+                                <source src="../assets/PRODUCT/KRTKL/VID KRTKL.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="text">
@@ -368,14 +357,14 @@
                     </div>
                 </a>
                 <!--STONED-->
-                <a href="../WEB1201_Assignment/BrandsDisp/stoned.html">
+                <a href="../PAGE BRAND/stoned.html">
                     <div class="box">
                         <div class="overlay">
-                            <img src="brand-logo-white/stoned.svg" alt="STONED Logo">
+                            <img src="../assets/HOME ASSETS/brand-logo/stoned.svg" alt="STONED Logo">
                         </div>
                         <div class="video-wrapper">
                             <video autoplay muted playsinline preload="auto" loop>
-                                <source src="STONED/VID STONED.mp4" type="video/mp4">
+                                <source src="../assets/PRODUCT/STONED/VID STONED.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="text">
