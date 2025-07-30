@@ -1,0 +1,511 @@
+/* ===== ZARI | SIGNUP ===== */
+:root {
+  --primary-color: #1a1a1a;
+  --secondary-color: #4a4a4a;
+  --accent-color: #1e1e1e;
+  --light-color: #ffffff;
+  --dark-overlay: rgba(30, 30, 30, 0.85);
+  --shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  --border-radius: 16px;
+  --border-thickness: 1.5px;
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--light-color);
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+  opacity: 0;
+  animation: runwayEntrance 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes runwayEntrance {
+  0% { transform: translateY(50%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Video Background */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7) blur(3px);
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+/* Darker Content Box with Rounded Edges */
+.content {
+  background: var(--dark-overlay);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 450px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.content::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+/* ZARI Logo Animation */
+.zari-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: 5.5rem;
+  margin-bottom: 0;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: var(--light-color);
+  animation: fontswitch 3s infinite alternate;
+  text-align: center;
+  display: block;
+  position: relative;
+}
+
+@keyframes fontswitch {
+  0%, 40% { font-family: 'Bebas Neue', sans-serif; }
+  45% { font-family: 'Helvetica', sans-serif; letter-spacing: 6px; }
+  50% { font-family: 'Times New Roman', serif; font-style: italic; }
+  55%, 100% { font-family: 'Bebas Neue', sans-serif; }
+}
+
+/* Welcome Text */
+.welcome-text {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.65rem;
+  margin: 0 auto 3.5rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.welcome-text::after {
+  content: '';
+  width: 60px;
+  height: 0.5px;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Form Styles */
+.membership-form {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.input-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0;
+  font-size: 0.8rem;
+  outline: none;
+  transition: var(--transition);
+  background: transparent;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--light-color);
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0.8;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.input-group input:focus {
+  border-bottom: 2px solid var(--light-color);
+  padding-left: 5px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group .icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  pointer-events: none;
+  padding-left: 5px;
+}
+/* Add this below your .input-group .icon styles */
+.input-group .icon-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  pointer-events: none;
+  padding-right: 5px;
+}
+
+/* Adjust input padding so text doesn't overlap the icon */
+.input-group input {
+  padding-left: 12px;
+  padding-right: 25px;
+}
+
+/* Password Toggle */
+.password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+
+/* Password Strength Indicator */
+.password-strength {
+  height: 3px;
+  margin-top: 5px;
+  transition: var(--transition);
+}
+
+.password-strength.weak {
+  width: 25%;
+  background-color: #ff5252;
+}
+
+.password-strength.medium {
+  width: 50%;
+  background-color: #ffb142;
+}
+
+.password-strength.strong {
+  width: 75%;
+  background-color: #33d9b2;
+}
+
+.password-strength.very-strong {
+  width: 100%;
+  background-color: #2ed573;
+}
+
+/* Password Match Indicator */
+.password-match {
+  font-size: 0.7rem;
+  margin-top: 5px;
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+  letter-spacing: 0.5px;
+}
+
+.password-match.visible {
+  height: 16px;
+}
+
+.password-match.matching {
+  color: #2ed573;
+}
+
+.password-match.not-matching {
+  color: #ff5252;
+}
+
+/* Terms Checkbox */
+.terms-container {
+  margin: 1.5rem 0 2rem;
+}
+
+.terms-checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.terms-checkbox input {
+  margin-right: 8px;
+}
+
+.terms-checkbox a {
+  color: var(--light-color);
+  text-decoration: none;
+  position: relative;
+}
+
+.terms-checkbox a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--light-color);
+  transition: var(--transition);
+}
+
+.terms-checkbox a:hover::after {
+  width: 100%;
+}
+
+/* Submit Button */
+.signup-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--light-color);
+  color: var(--primary-color);
+  border: 1px solid var(--light-color);
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.signup-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+  transition: 0.5s;
+}
+
+.signup-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.signup-btn:hover::before {
+  left: 100%;
+}
+
+/* Form Footer */
+.form-footer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  position: relative;
+  text-align: center;
+}
+
+.form-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.form-footer span {
+  font-family: 'Poppins', sans-serif; 
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.5px;
+}
+
+.form-footer a {
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 700; 
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.form-footer a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--light-color);
+  transition: width 0.4s ease;
+}
+
+.form-footer a:hover {
+  color: var(--light-color);
+}
+
+.form-footer a:hover::after {
+  width: 100%;
+}
+
+/* Footer */
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.site-footer .year {
+  font-weight: 700;
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  z-index: 1000;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.popup.show {
+  opacity: 1;
+  visibility: visible;
+  top: 30px;
+}
+
+.popup.success {
+  background-color: #2ed573;
+  color: #fff;
+}
+
+.popup.error {
+  background-color: #ff5252;
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .content {
+    padding: 30px 25px;
+    max-width: 90%;
+  }
+
+  .zari-logo {
+    font-size: 3.5rem;
+  }
+
+  .welcome-text {
+    font-size: 0.6rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Close Button with Box */
+.close-button {
+    position: fixed; 
+    top: 20px;
+    right: 20px;
+    width: 40px; 
+    height: 40px; 
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    font-size: 20px;
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+.close-button:hover {
+    background: rgba(0, 0, 0, 0.7); 
+    color: #fff;
+    transform: scale(1.05); 
+}

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ZARI - Contact</title>
+  <link rel="stylesheet" href="web_style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script defer src="web_script.js"></script>
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="custom-header">
+    <div class="top-row">
+      <div class="left-logo">
+        <div class="logo">ZARI</div>
+      </div>
+
+      <div class="center-search">
+        <input type="text" placeholder="Search products..." class="search-input" />
+      </div>
+
+      <div class="nav-icons">
+        <button onclick="window.location.href='web_login.html'">Login</button>
+        <button onclick="window.location.href='cart/web_cart.html'">Cart</button>
+      </div>
+    </div>
+
+    <div class="bottom-row">
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="web_index.html">Home</a>
+            <ul class="dropdown">
+              <li><a href="#zari">ZARI</a></li>
+              <li><a href="#">CATEGORIES</a></li>
+              <li><a href="#new-arrival">NEW ARRIVAL</a></li>
+              <li><a href="#brands">BRANDS YOU LOVE</a></li>
+              <li><a href="#most-wanted">MOST WANTED</a></li>
+            </ul>
+          </li>
+          <li>
+          <a href="./categories.html">Categories</a>
+          <ul class="dropdown">
+            <li><a href="./CategoryDisp/top.html">Tops</a></li>
+            <li><a href="./CategoryDisp/bottom.html">Bottoms</a></li>
+            <li><a href="./CategoryDisp/acessories.html">Accessories</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Brands</a>
+          <ul class="dropdown">
+            <li><a href="OPT.html">OPT</a></li>
+            <li><a href="web_index.html#svg">SVG</a></li>
+            <li><a href="web_index.html#svg">NAISE</a></li>
+            <li><a href="web_index.html#svg">KRTKL</a></li>
+            <li><a href="web_index.html#stoned">STONED & CO</a></li>
+          </ul>
+        </li>
+          <li><a href="web_contact.html">Contact</a></li>
+          <li><a href="web_about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" id="backToTop">
+      <svg viewBox="0 0 24 24">
+          <path d="M12 2L8 6h3v10h2V6h3l-4-4z"/>
+      </svg>
+  </button>
+
+  <!-- Contact Hero Section -->
+  <section id="contact-hero">
+    <video autoplay muted loop id="bg-video">
+      <source src="assets/videos/contact-bg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="overlay">
+      <h1>Contact Us</h1>
+      <p>Start the conversation to establish good relationships and business.</p>
+    </div>
+  </section>
+
+  <!-- Info Button Section -->
+  <div class="info-buttons outside-hero">
+    <div class="info-box">
+      <h3>Office Location</h3>
+      <p>Visit us at our main office in the heart of the city.</p>
+      <a href="#" class="btn">Direction →</a>
+    </div>
+    <div class="info-box">
+      <h3>Working Hours</h3>
+      <p>We are available Monday to Friday, 9AM to 6PM.</p>
+      <a href="#" class="btn">Learn More →</a>
+    </div>
+    <div class="info-box">
+      <h3>Communication</h3>
+      <p>Reach out through email, phone, or live chat.</p>
+      <a href="#" class="btn">Support →</a>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="contact-container">
+
+    <!-- LEFT: Video + Info -->
+    <div class="contact-right">
+      <video autoplay muted loop playsinline class="contact-video">
+        <source src="assets/videos/contact.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h2>Contact Us</h2>
+      <p>If you have any questions, concerns, or feedback, please don't hesitate to reach out to us. We're here to help!</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <i class='bx bx-map'></i>
+          <span>5, Jalan Universiti, Bandar Sunway, 47500 Petaling Jaya, Selangor, Malaysia.</span>
+        </div>
+        <div class="contact-item">
+          <i class='bx bx-phone'></i>
+          <span>+60 12-345 6789</span>
+        </div>
+        <div class="contact-item">
+          <i class='bx bx-envelope'></i>
+          <span><a href="mailto:info@zari.com" class="email-link">info@zari.com</a></span>
+        </div>
+      </div>
+      <!-- Social Media Section -->
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </div>
+
+    <!-- RIGHT: Form -->
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+      <div class="contact-left-title">
+        <h1>Get In Touch</h1>
+        <p>We'd love to hear from you! Please fill out the form below to get in touch with us.</p>
+        <hr>
+      </div>
+      <input type="hidden" name="access_key" value="b5872e9e-04f9-4a73-83bd-91e05da21df6">
+      <input type="text" name="name" placeholder="Your Name" class="contact-input" required>
+      <input type="email" name="email" placeholder="Your Email" class="contact-input" required>
+      <input type="text" name="phone" placeholder="Phone Number" class="contact-input" required>
+      <textarea name="message" placeholder="Your Message" class="contact-input" required></textarea>
+      <button type="submit" class="contact-submit">Send Message <i class='bx bxs-arrow-right-stroke'></i></button>
+    </form>
+  </div>
+
+  <!-- Google Map -->
+  <section class="map-section">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1026668581303!2d101.60126607568469!3d3.0672266969084965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4c8f5d98b46d%3A0xed55e2cca5c2d394!2sSunway%20University!5e0!3m2!1sen!2smy!4v1753767857099!5m2!1sen!2smy"
+    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <!-- Desktop Layout -->
+        <div class="footer-main">
+            <div class="logo">ZARI</div>
+            
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a href="#">Brand</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Return & Exchanges</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Brand</h3>
+                <ul>
+                    <li><a href="#">OPT</a></li>
+                    <li><a href="#">SVG</a></li>
+                    <li><a href="#">NAISE</a></li>
+                    <li><a href="#">KRTKL</a></li>
+                    <li><a href="#">STONED</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Layout -->
+        <div class="mobile-footer">
+            <div class="mobile-logo">ZARI</div>
+            
+            <div class="dropdown-section">
+                <div class="dropdown-header" onclick="toggleDropdown(this)">
+                    <span>Shop</span>
+                    <span class="dropdown-icon">▼</span>
+                </div>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Category</a></li>
+                        <li><a href="#">Brand</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown-section">
+                <div class="dropdown-header" onclick="toggleDropdown(this)">
+                    <span>Help</span>
+                    <span class="dropdown-icon">▼</span>
+                </div>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Return & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown-section">
+                <div class="dropdown-header" onclick="toggleDropdown(this)">
+                    <span>Brand</span>
+                    <span class="dropdown-icon">▼</span>
+                </div>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#">OPT</a></li>
+                        <li><a href="#">SVG</a></li>
+                        <li><a href="#">NAISE</a></li>
+                        <li><a href="#">KRTKL</a></li>
+                        <li><a href="#">STONED</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>&copy; 2025 ZARI. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

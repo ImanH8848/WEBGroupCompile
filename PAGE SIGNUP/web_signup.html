@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZARI | SIGN UP</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="signup_.css">
+</head>
+<body>
+  <!-- Video Background -->
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="assets/assests:video.mp4" type="video/mp4">
+      <source src="assets/video.webm" type="video/webm">
+      <img src="assets/fallback-image.jpg" alt="Background">
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+
+  <!-- Success/Error Popup -->
+  <div id="popup" class="popup"></div>
+
+  <!-- Close Button -->
+        <a href="index.html" class="close-button"> /* homepage */
+       <i class="fas fa-times"></i>
+   </a>
+
+  <!-- Main container -->
+  <div class="container">
+    <div class="content">
+      <div class="header">
+        <h1 class="zari-logo">ZARI</h1>
+        <p class="welcome-text">JOIN OUR COMMUNITY</p>
+      </div>
+
+      <!-- Form Section -->
+      <div class="form-section">
+        <div class="form-container">
+          <form id="signup-form" class="membership-form">
+            <!-- Email Field -->
+            <div class="input-group">
+              <input type="email" placeholder="EMAIL" required />
+              <i class="fas fa-envelope icon-right"></i>
+      </div>
+            
+            <!-- Username Field -->
+            <div class="input-group">
+              <input type="username" placeholder="Username" required />
+              <i class="fas fa-user icon-right"></i>
+            </div>
+
+            <!-- Password Field -->
+            <div class="input-group password-container">
+              <input type="password" id="password" placeholder="PASSWORD" required>
+              <span id="toggle-password" class="toggle-password">
+                <i class="fas fa-eye"></i>
+              </span>
+              <div class="underline"></div>
+              <div class="password-strength"></div>
+            </div>
+            
+            <!-- Confirm Password Field -->
+            <div class="input-group password-container">
+              <input type="password" id="confirm-password" placeholder="CONFIRM PASSWORD" required>
+              <span id="toggle-confirm-password" class="toggle-password">
+              <i class="fas fa-eye"></i>
+              </span>
+              <div class="underline"></div>
+              <div class="password-match"></div>
+            </div>
+
+            <!-- Terms Checkbox -->
+            <div class="terms-container">
+              <label class="terms-checkbox">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">
+                  I agree to the <a href="#">Terms of Service</a>&nbsp;and&nbsp;<a href="#">Privacy Policy</a>
+                </label>
+            </div>
+
+            <button type="submit" class="signup-btn">CREATE ACCOUNT</button>
+          </form>
+
+          <div class="form-footer">
+            <span>Already have an account? <a href="weblogin_.html">Log In</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>ZARI <time class="year">2025</time> &copy; All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const signupForm = document.getElementById('signup-form');
+      const popup = document.getElementById('popup');
+      const togglePassword = document.getElementById('toggle-password');
+      const toggleConfirmPassword = document.getElementById('toggle-confirm-password');
+      const passwordInput = document.getElementById('password');
+      const confirmPasswordInput = document.getElementById('confirm-password');
+      const passwordStrength = document.querySelector('.password-strength');
+      const passwordMatch = document.querySelector('.password-match');
+
+      // Password toggle functionality
+      togglePassword.addEventListener('click', function() {
+        const isPassword = passwordInput.type === 'password';
+        passwordInput.type = isPassword ? 'text' : 'password';
+        this.querySelector('i').classList.toggle('fa-eye');
+        this.querySelector('i').classList.toggle('fa-eye-slash');
+      });
+
+      toggleConfirmPassword.addEventListener('click', function() {
+        const isPassword = confirmPasswordInput.type === 'password';
+        confirmPasswordInput.type = isPassword ? 'text' : 'password';
+        this.querySelector('i').classList.toggle('fa-eye');
+        this.querySelector('i').classList.toggle('fa-eye-slash');
+      });
+
+      // Password strength indicator
+      passwordInput.addEventListener('input', function() {
+        const strength = calculateStrength(this.value);
+        passwordStrength.className = 'password-strength ' + strength;
+      });
+
+      // Password match checker
+      confirmPasswordInput.addEventListener('input', function() {
+        if (this.value && passwordInput.value) {
+          passwordMatch.textContent = this.value === passwordInput.value ? 'Passwords match' : 'Passwords do not match';
+          passwordMatch.className = 'password-match visible ' + 
+            (this.value === passwordInput.value ? 'matching' : 'not-matching');
+        } else {
+          passwordMatch.className = 'password-match';
+        }
+      });
+
+      // Form submission
+        signupForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (passwordInput.value !== confirmPasswordInput.value) {
+          showPopup('Passwords do not match', 'error');
+          return;
+        }
+        
+        if (!document.getElementById('terms').checked) {
+          showPopup('Please accept the terms and conditions', 'error');
+          return;
+        }
+     
+        showPopup('Account created successfully!, kindly log in!', 'success');
+        setTimeout(() => {
+        window.location.href = 'weblogin_.html'; 
+       }, 1500);
+});
+      function calculateStrength(password) {
+        if (!password) return 'weak';
+        
+        const strength = {
+          0: 'weak',
+          1: 'medium',
+          2: 'strong',
+          3: 'very-strong'
+        };
+        let score = 0;
+        
+        // At least 8 characters
+        if (password.length >= 8) score++;
+        // Contains lowercase and uppercase
+        if (/[a-z]/.test(password) && /[A-Z]/.test(password)) score++;
+        // Contains numbers
+        if (/\d/.test(password)) score++;
+        // Contains special characters
+        if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) score++;
+        
+        return strength[Math.min(Math.floor(score/2), 3)];
+      }
+
+      function showPopup(message, type) {
+        popup.textContent = message;
+        popup.className = `popup show ${type}`;
+        setTimeout(() => {
+          popup.classList.remove('show');
+        }, 2500);
+      }
+    });
+  </script>
+</body>
+</html>
