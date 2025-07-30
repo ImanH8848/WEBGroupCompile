@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('BEBAS/Bebas-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.category-section {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.category-column {
+  flex: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+   filter: grayscale(100%);
+  transition: filter 0.6s ease, transform 0.3s ease;
+}
+
+.category-column:hover {
+  filter: grayscale(0%);
+}
+
+.category-column .overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+}
+
+.category-column h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.category-button {
+  padding: 10px 20px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.category-button:hover {
+  background: white;
+  color: black;
+}
+
+.top {
+  background-image: url('./categories-pic/TOP.jpg');
+}
+
+.bottom {
+  background-image: url('./categories-pic/BOTTOM.jpg');
+}
+
+.accessories {
+  background-image: url('./categories-pic/ACESSORIES.jpg');
+}
+
+@media screen and (max-width: 768px) {
+  .category-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .category-column {
+    width: 100%;
+    height: 200px; /* more controlled height */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    flex: none; /* prevent it from trying to grow equally */
+  }
+
+  .category-column .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0.5rem;
+    background: none;
+  }
+
+  .category-column h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .category-button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+}

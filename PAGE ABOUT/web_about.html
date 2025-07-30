@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ZARI - About Us</title>
+  <link rel="stylesheet" href="web_style.css" />
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script defer src="web_script.js"></script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="custom-header">
+    <div class="top-row">
+      <div class="left-logo">
+        <div class="logo">ZARI</div>
+      </div>
+
+      <div class="center-search">
+        <input type="text" placeholder="Search products..." class="search-input" />
+      </div>
+
+      <div class="nav-icons">
+        <button onclick="window.location.href='web_login.html'">Login</button>
+        <button onclick="window.location.href='cart/web_cart.html'">Cart</button>
+      </div>
+    </div>
+
+    <div class="bottom-row">
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="web_index.html">Home</a>
+            <ul class="dropdown">
+              <li><a href="#zari">ZARI</a></li>
+              <li><a href="#">CATEGORIES</a></li>
+              <li><a href="#new-arrival">NEW ARRIVAL</a></li>
+              <li><a href="#brands">BRANDS YOU LOVE</a></li>
+              <li><a href="#most-wanted">MOST WANTED</a></li>
+            </ul>
+          </li>
+          <li>
+          <a href="./categories.html">Categories</a>
+          <ul class="dropdown">
+            <li><a href="./CategoryDisp/top.html">Tops</a></li>
+            <li><a href="./CategoryDisp/bottom.html">Bottoms</a></li>
+            <li><a href="./CategoryDisp/acessories.html">Accessories</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Brands</a>
+          <ul class="dropdown">
+            <li><a href="OPT.html">OPT</a></li>
+            <li><a href="web_index.html#svg">SVG</a></li>
+            <li><a href="web_index.html#svg">NAISE</a></li>
+            <li><a href="web_index.html#svg">KRTKL</a></li>
+            <li><a href="web_index.html#stoned">STONED & CO</a></li>
+          </ul>
+        </li>
+          <li><a href="web_contact.html">Contact</a></li>
+          <li><a href="web_about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<!-- BACK TO TOP BUTTON -->
+<button class="back-to-top" id="backToTop">
+    <svg viewBox="0 0 24 24">
+        <path d="M12 2L8 6h3v10h2V6h3l-4-4z"/>
+    </svg>
+</button>
+
+<!-- About Us Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title">Meet Our Team</h1>
+    <p class="hero-subtitle">The Visionaries Behind ZARI</p>
+    <p class="hero-description">
+      Discover the passionate and driven minds who are seamlessly blending technology with fashion-forward innovation. 
+      Our dynamic and diverse team of creative professionals comes from various backgrounds, united by a shared vision 
+      to redefine and elevate the fashion industry. Through bold ideas, thoughtful design and technological expertise, 
+      we are committed to shaping a different future.
+    </p>
+  </div>
+</section> 
+
+<!-- Team Section -->
+<section id="the-team" class="team-section">
+  <div class="section-header">
+    <p class="section-subtitle">Meet the visionaries behind ZARI - the minds blending tech with fashion-forward thinking.</p>
+    <h1 class="section-title">THE TEAM</h1>
+  </div>
+
+  <div class="carousel-container">
+    <div class="carousel-track" id="team-carousel-track">
+      
+      <!-- Team Member 1 -->
+      <div class="team-carousel-card">
+        <div class="card-image-wrapper">
+          <div class="rectangular-bg"></div>
+          <img class="card-bg" src="assets/images/members/Aniq.png" alt="Aniq background" style="width: auto;"/>
+        </div>
+        <div class="team-card-inner">
+          <div class="team-tag">Frontend Visionary</div>
+          <div class="team-info">
+            <div class="team-name">Muhammad Aniq Arshad</div>
+            <p class="team-meta">23096407 | Bachelor of Software Engineering (Hons)</p>
+            <div class="team-description">
+              <span class="description-top">UI/UX Flow</span>
+              The website core designer. Built visual sections for New Arrivals, Brand Categories & Footer.
+              <span class="description-bottom">CREATIVE • USER-FIRST</span>
+            </div>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/muhammad-aniq-arshad-mohd-nor-9284a9281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="icon-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/AniqArshad" target="_blank" class="icon-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.instagram.com/_niqshad?igsh=enFyZ2E1dGF0aTYx&utm_source=qr" target="_blank" class="icon-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="team-carousel-card">
+        <div class="card-image-wrapper">
+          <div class="rectangular-bg"></div>
+          <img class="card-bg" src="assets/images/members/Iman.png" alt="Iman background" />
+        </div>
+        <div class="team-card-inner">
+          <div class="team-tag">Homepage & Brand Designer</div>
+          <div class="team-info">
+            <div class="team-name">Maizzatul Iman Humaira</div>
+            <p class="team-meta">23095425 | Bachelor of Software Engineering (Hons)</p>
+            <div class="team-description">
+              <span class="description-top">Intro & Layout</span>
+              The architect behind the home page, navigation, brand pages, and introductory visuals.
+              <span class="description-bottom">FLOW • COHESION</span>
+            </div>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/maizzatul-iman-humaira-26a0712b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="icon-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/ImanH8848" target="_blank" class="icon-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.instagram.com/imnmyra?igsh=MXMyZzdmY3g0ZW42dQ==" target="_blank" class="icon-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="team-carousel-card">
+        <div class="card-image-wrapper">
+          <div class="rectangular-bg"></div>
+          <img class="card-bg" src="assets/images/members/Stewart.png" alt="Stewart background" />
+        </div>
+        <div class="team-card-inner">
+          <div class="team-tag">User Flow & Structure Specialist</div>
+          <div class="team-info">
+            <div class="team-name">Stewart Ting Shi Yu</div>
+            <p class="team-meta">23096696 | Bachelor of Software Engineering (Hons)</p>
+            <div class="team-description">
+              <span class="description-top">User Flow & Structure</span>
+              Handles user-facing features like the cart, checkout, contact, and about pages.
+              <span class="description-bottom">DETAIL • POLISH</span>
+            </div>
+            <div class="social-icons">
+              <a href="https://linkedin.com/in/aniqarshad" target="_blank" class="icon-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/stewartting/" target="_blank" class="icon-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.instagram.com/stewartsynchro/" target="_blank" class="icon-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 4 -->
+      <div class="team-carousel-card">
+        <div class="card-image-wrapper">
+          <div class="rectangular-bg"></div>
+          <img class="card-bg" src="assets/images/members/Jihan.png" alt="Jihan background" />
+        </div>
+        <div class="team-card-inner">
+          <div class="team-tag">Access & Auth Specialist</div>
+          <div class="team-info">
+            <div class="team-name">Jihan Fahira</div>
+            <p class="team-meta">23096100 | Bachelor of Software Engineering (Hons)</p>
+            <div class="team-description">
+              <span class="description-top">Login & Signup</span>
+              Focused on building seamless user experiences with a passion for intuitive design.
+              <span class="description-bottom">SECURE • SMOOTH</span>
+            </div>
+            <div class="social-icons">
+              <a href="www.linkedin.com/in/jihanfahira2905" target="_blank" class="icon-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/Cyldeo4" target="_blank" class="icon-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.instagram.com/cyldeo4?igsh=YTVmNmZjbno0bzgz&utm_source=qr" target="_blank" class="icon-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 5 -->
+      <div class="team-carousel-card">
+        <div class="card-image-wrapper">
+          <div class="rectangular-bg"></div>
+          <img class="card-bg" src="assets/images/members/Bryan.png" alt="Bryan background" />
+        </div>
+        <div class="team-card-inner">
+          <div class="team-tag">Carousel & Collection Specialist</div>
+          <div class="team-info">
+            <div class="team-name">Por Qi Jie (Bryan)</div>
+            <p class="team-meta">23064678 | Bachelor of Software Engineering (Hons)</p>
+            <div class="team-description">
+              <span class="description-top">Carousel & Collection</span>
+              Powers category pages and visual product displays with dynamic elements.
+              <span class="description-bottom">VISUAL • ENGAGING</span>
+            </div>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/por-qi-jie-b36615330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="icon-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/JChi-P" target="_blank" class="icon-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.instagram.com/yuknowthatdude?igsh=b2xvYWxzdmQwaTRz" target="_blank" class="icon-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="carousel-nav">
+      <button class="nav-btn" id="prev-btn">‹</button>
+      <div class="nav-dots" id="team-nav-dots"></div>
+      <button class="nav-btn" id="next-btn">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <!-- Desktop Layout -->
+        <div class="footer-main">
+            <div class="logo">ZARI</div>
+            
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a href="#">Brand</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Return & Exchanges</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Brand</h3>
+                <ul>
+                    <li><a href="#">OPT</a></li>
+                    <li><a href="#">SVG</a></li>
+                    <li><a href="#">NAISE</a></li>
+                    <li><a href="#">KRTKL</a></li>
+                    <li><a href="#">STONED</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Layout -->
+        <div class="mobile-footer">
+            <div class="mobile-logo">ZARI</div>
+            
+            <div class="dropdown-section">
+                <div class="dropdown-header" onclick="toggleDropdown(this)">
+                    <span>Shop</span>
+                    <span class="dropdown-icon">▼</span>
+                </div>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Category</a></li>
+                        <li><a href="#">Brand</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown-section">
+                <div class="dropdown-header" onclick="toggleDropdown(this)">
+                    <span>Help</span>
+                    <span class="dropdown-icon">▼</span>
+                </div>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Return & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown-section">
+                <div class="dropdown-header" onclick="toggleDropdown(this)">
+                    <span>Brand</span>
+                    <span class="dropdown-icon">▼</span>
+                </div>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#">OPT</a></li>
+                        <li><a href="#">SVG</a></li>
+                        <li><a href="#">NAISE</a></li>
+                        <li><a href="#">KRTKL</a></li>
+                        <li><a href="#">STONED</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>&copy; 2025 ZARI. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
