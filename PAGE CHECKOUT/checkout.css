@@ -898,7 +898,7 @@ nav ul li .dropdown a:hover {
 /* ============================= FOOTER ============================= */
 .footer {
     position: relative;
-    background-image: url(./bg-hero.jpg);
+    background-image: url('../assets/HOME\ ASSETS/bg-footer.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

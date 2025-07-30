@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>ZARI - About Us</title>
-  <link rel="stylesheet" href="webstyle-cart.css" />
+  <title>ZARI</title>
+  <link rel="stylesheet" href="cart.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script defer src="webscript-cart.js"></script>
+  <script defer src="cart.js"></script>
   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -101,25 +101,27 @@
             <div class="price-breakdown">
                 <div class="price-row">
                     <span>Product Amount:</span>
-                    <span id="product-amount">$0</span>
+                    <span id="product-amount">RM0</span>
                 </div>
                 <div class="price-row">
                     <span>Shipping Charge:</span>
-                    <span id="shipping-charge">$50.00</span>
+                    <span id="shipping-charge">RM15.00</span>
                 </div>
                 <div class="price-row">
                     <span>Discount:</span>
-                    <span id="discount-amount">-$0</span>
+                    <span id="discount-amount">-RM0</span>
                 </div>
                 <div class="price-row total">
                     <span>Total (including VAT):</span>
-                    <span id="total-amount">$0</span>
+                    <span id="total-amount">RM0</span>
                 </div>
             </div>
 
-            <button class="checkout-btn" id="checkout-btn" disabled>
-                <i class="fas fa-credit-card"></i> CHECKOUT
-            </button>
+            <a href="../PAGE CHECKOUT/checkout.html">
+                <button class="checkout-btn" id="checkout-btn" disabled>
+                    <i class="fas fa-credit-card"></i> CHECKOUT
+                </button>
+            </a>
 
             <div class="voucher-section">
                 <div class="voucher-header">
@@ -128,10 +130,10 @@
                 
                 <select class="voucher-dropdown" id="voucher-dropdown">
                     <option value="">Select a voucher</option>
-                    <option value="SAVE10">SAVE10 - 10% off (min $100)</option>
-                    <option value="WELCOME20">WELCOME20 - $20 off (min $150)</option>
+                    <option value="SAVE10">SAVE10 - 10% off (min RM100)</option>
+                    <option value="WELCOME20">WELCOME20 - $20 off (min RM150)</option>
                     <option value="FREESHIP">FREESHIP - Free shipping</option>
-                    <option value="STUDENT15">STUDENT15 - 15% off (min $80)</option>
+                    <option value="STUDENT15">STUDENT15 - 15% off (min RM80)</option>
                 </select>
 
                 <div class="voucher-input-group">
@@ -154,66 +156,66 @@
     </div>
 </div>
 
-<!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-content">
-        <!-- Desktop Layout -->
-        <div class="footer-main">
-            <div class="logo">ZARI</div>
-            
-            <div class="footer-section">
-                <h3>Shop</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Category</a></li>
-                    <li><a href="#">Brand</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About Us</a></li>
-                </ul>
-            </div>
+<!-- ========================================================== FOOTER SECTION ========================================================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Desktop Layout -->
+            <div class="footer-main">
+                <div class="logo">ZARI</div>
+                
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="../PAGE HOME/home_index.html">Home</a></li>
+                        <li><a href="../PAGE CATEGORY/top.html">Category</a></li>
+                        <li><a href="../PAGE BRAND/svg.html">Brand</a></li>
+                        <li><a href="../PAGE CONTACT/contact.html">Contact</a></li>
+                        <li><a href="../PAGE ABOUT/about.html">About Us</a></li>
+                    </ul>
+                </div>
 
             <div class="footer-section">
                 <h3>Help</h3>
                 <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Shipping & Delivery</a></li>
-                    <li><a href="#">Return & Exchanges</a></li>
-                    <li><a href="#">Size Guide</a></li>
-                    <li><a href="#">Track Order</a></li>
+                    <li>FAQ</li>
+                    <li>Shipping & Delivery</li>
+                    <li>Return & Exchanges</li>
+                    <li>Size Guide</li>
+                    <li>Track Order</li>
                 </ul>
             </div>
 
             <div class="footer-section">
                 <h3>Brand</h3>
                 <ul>
-                    <li><a href="#">OPT</a></li>
-                    <li><a href="#">SVG</a></li>
-                    <li><a href="#">NAISE</a></li>
-                    <li><a href="#">KRTKL</a></li>
-                    <li><a href="#">STONED</a></li>
+                    <li><a href="../PAGE BRAND/opt.html">OPT</a></li>
+                    <li><a href="../PAGE BRAND/svg.html">SVG</a></li>
+                    <li><a href="../PAGE BRAND/naise.html">NAISE</a></li>
+                    <li><a href="../PAGE BRAND/krtkl.html">KRTKL</a></li>
+                    <li><a href="../PAGE BRAND/stoned.html">STONED & CO</a></li>
                 </ul>
             </div>
         </div>
 
-        <!-- Mobile Layout -->
-        <div class="mobile-footer">
-            <div class="mobile-logo">ZARI</div>
-            
-            <div class="dropdown-section">
-                <div class="dropdown-header" onclick="toggleDropdown(this)">
-                    <span>Shop</span>
-                    <span class="dropdown-icon">▼</span>
+            <!-- Mobile Layout -->
+            <div class="mobile-footer">
+                <div class="mobile-logo">ZARI</div>
+                
+                <div class="dropdown-section">
+                    <div class="dropdown-header" onclick="toggleDropdown(this)">
+                        <span>Shop</span>
+                        <span class="dropdown-icon">▼</span>
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="../PAGE HOME/home_index.html">Home</a></li>
+                            <li><a href="../PAGE CATEGORY/top.html">Category</a></li>
+                            <li><a href="../PAGE BRAND/svg.html">Brand</a></li>
+                            <li><a href="../PAGE CONTACT/contact.html">Contact</a></li>
+                            <li><a href="../PAGE ABOUT/about.html">About Us</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="dropdown-content">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Category</a></li>
-                        <li><a href="#">Brand</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">About Us</a></li>
-                    </ul>
-                </div>
-            </div>
 
             <div class="dropdown-section">
                 <div class="dropdown-header" onclick="toggleDropdown(this)">
@@ -222,11 +224,11 @@
                 </div>
                 <div class="dropdown-content">
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Shipping & Delivery</a></li>
-                        <li><a href="#">Return & Exchanges</a></li>
-                        <li><a href="#">Size Guide</a></li>
-                        <li><a href="#">Track Order</a></li>
+                        <li>FAQ</li>
+                        <li>Shipping & Delivery</li>
+                        <li>Return & Exchanges</li>
+                        <li>Size Guide</li>
+                        <li>Track Order</li>
                     </ul>
                 </div>
             </div>
@@ -238,22 +240,22 @@
                 </div>
                 <div class="dropdown-content">
                     <ul>
-                        <li><a href="#">OPT</a></li>
-                        <li><a href="#">SVG</a></li>
-                        <li><a href="#">NAISE</a></li>
-                        <li><a href="#">KRTKL</a></li>
-                        <li><a href="#">STONED</a></li>
+                        <li><a href="../PAGE BRAND/opt.html">OPT</a></li>
+                        <li><a href="../PAGE BRAND/svg.html">SVG</a></li>
+                        <li><a href="../PAGE BRAND/naise.html">NAISE</a></li>
+                        <li><a href="../PAGE BRAND/krtkl.html">KRTKL</a></li>
+                        <li><a href="../PAGE BRAND/stoned.html">STONED & CO</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Copyright -->
-        <div class="copyright">
-            <p>&copy; 2025 ZARI. All rights reserved.</p>
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>&copy; 2025 ZARI. All rights reserved.</p>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 </body>
 </html>
