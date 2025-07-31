@@ -70,6 +70,10 @@
             text-decoration: none;
         }
 
+        .breadcrumb a:hover {
+            color: white;
+        }
+
         /* ==================== NAVBAR STYLES ==================== */
 .custom-header {
   background-color: var(--charcoal);
