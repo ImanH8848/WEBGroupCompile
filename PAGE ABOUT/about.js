@@ -1,3 +1,94 @@
+// =================== Search Button ===================
+const searchBtn = document.getElementById('searchBtn');
+if (searchBtn) {
+searchBtn.addEventListener('click', () => {
+    alert('Search functionality coming soon!');
+});
+}
+
+// ==================== HAMBURGER MENU FUNCTIONALITY ====================
+// ==================== HAMBURGER MENU ====================
+// Moved the function call right after its definition
+function initializeHamburgerMenu() {
+const hamburger = document.querySelector('.hamburger');
+const bottomRow = document.querySelector('.bottom-row');
+const body = document.body;
+
+// Debugging: Log elements to console
+console.log('Hamburger:', hamburger);
+console.log('Bottom row:', bottomRow);
+
+if (!hamburger || !bottomRow) {
+    console.error('Hamburger menu elements not found!');
+    return;
+}
+
+const toggleMenu = () => {
+    console.log('Toggling menu'); // Debug log
+    hamburger.classList.toggle('active');
+    bottomRow.classList.toggle('active');
+    body.classList.toggle('menu-open');
+    
+    if (!bottomRow.classList.contains('active')) {
+    document.querySelectorAll('.nav-links li.active').forEach(item => {
+        item.classList.remove('active');
+    });
+    }
+};
+
+hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+});
+
+document.querySelectorAll('.nav-links li').forEach(link => {
+    if (link.querySelector('.dropdown')) {
+    link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+        if (e.target === this.querySelector('a:first-child')) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        this.classList.toggle('active');
+        document.querySelectorAll('.nav-links li').forEach(otherLink => {
+            if (otherLink !== this) otherLink.classList.remove('active');
+        });
+        }
+    });
+    }
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+    if (!link.parentElement.querySelector('.dropdown')) {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+        toggleMenu();
+        }
+    });
+    }
+});
+
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.custom-header') && bottomRow.classList.contains('active')) {
+    toggleMenu();
+    }
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+    hamburger.classList.remove('active');
+    bottomRow.classList.remove('active');
+    body.classList.remove('menu-open');
+    document.querySelectorAll('.nav-links li.active').forEach(item => {
+        item.classList.remove('active');
+    });
+    }
+});
+}
+
+// ACTUALLY CALL THE FUNCTION
+initializeHamburgerMenu();
+
 // Carousel functionality for team section
 class TeamCarousel {
   constructor() {
