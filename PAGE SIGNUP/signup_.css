@@ -172,7 +172,7 @@ body {
   transition: var(--transition);
   background: transparent;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--light-color);
 }
 

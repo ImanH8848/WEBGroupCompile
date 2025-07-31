@@ -75,6 +75,7 @@ html {
 .search-input {
   font-size: 1rem;
   padding: 0.5rem 1rem;
+  border-radius: 20px;
   border: none;
   width: 300px;
 }
@@ -310,6 +311,7 @@ nav ul li .dropdown a {
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
     border: none;
+    border-radius: 12px;
     cursor: pointer;
     z-index: 9999;
     display: flex;
