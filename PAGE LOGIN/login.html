@@ -3,13 +3,19 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>ZARI | LOGN IN</title>
+   <title>ZARI | LOG IN</title>
    <link rel="stylesheet" href="login_.css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+   <!-- Close Button -->
+   <a href="index.html" class="close-button">
+     <i class="fas fa-times"></i>
+   </a>
+
    <!-- Video Background -->
    <div class="video-background">
        <video autoplay muted loop playsinline>
@@ -35,14 +41,14 @@
                 
                        <!-- Username Field -->
                        <div class="input-group">
-                           <input type="text" placeholder="Username" required />
+                           <input type="text" id="username" placeholder="Username" required />
                            <i class="fas fa-user icon-right"></i>
                        </div>
 
                        <!-- Password Field -->
                        <div class="input-group">
-                           <input type="password" placeholder="Password" required />
-                           <i class="fas fa-lock icon-right"></i>
+                           <input type="password" placeholder="Password" id="password" required />
+                           <i class="fas fa-lock icon-right" id="toggle-password" style="cursor: pointer;"></i>
                        </div>
 
                        <!-- Submit Button -->
@@ -73,7 +79,6 @@
         const usernameInput = document.getElementById("username");
         const rememberCheckbox = document.getElementById("remember-me");
 
-
         // Prefill username if saved
         window.addEventListener("DOMContentLoaded", () => {
             const savedUsername = localStorage.getItem("rememberedUsername");
@@ -82,7 +87,6 @@
                 rememberCheckbox.checked = true;
             }
         });
-
 
         loginForm.addEventListener("submit", function(event) {
             event.preventDefault();
@@ -99,6 +103,22 @@
                 alert("Please fill in both username and password.");
             }
         });
-    </script>
+   </script>
+
+   <script>
+       // Toggle password visibility
+       const togglePassword = document.getElementById("toggle-password");
+       const passwordInput = document.getElementById("password");
+
+       togglePassword.addEventListener("click", () => {
+           const isPassword = passwordInput.type === "password";
+           passwordInput.type = isPassword ? "text" : "password";
+
+           // Toggle icon style (lock vs unlock)
+           togglePassword.classList.toggle("fa-lock");
+           togglePassword.classList.toggle("fa-unlock");
+       });
+   </script>
+
 </body>
 </html>
