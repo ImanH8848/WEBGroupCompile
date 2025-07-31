@@ -50,8 +50,12 @@
 
                        <!-- Form Footer -->
                        <div class="form-footer">
-                           <a href="#"style="margin-left:auto">Forgot password?</a>
-                       </div>
+                            <label class="remember-me">
+                                <input type="checkbox" id="remember-me" />
+                                Remember Me
+                            </label>
+                            <a href="#">Forgot password?</a>
+                        </div>
                    </form>
                </div>
            </div>
@@ -65,10 +69,36 @@
 
    <!-- Redirect Script -->
    <script>
-     document.getElementById("login-form").addEventListener("submit", function(event) {
-       event.preventDefault();
-       window.location.href = "websucces_.html";
-     });
-   </script>
+        const loginForm = document.getElementById("login-form");
+        const usernameInput = document.getElementById("username");
+        const rememberCheckbox = document.getElementById("remember-me");
+
+
+        // Prefill username if saved
+        window.addEventListener("DOMContentLoaded", () => {
+            const savedUsername = localStorage.getItem("rememberedUsername");
+            if (savedUsername) {
+                usernameInput.value = savedUsername;
+                rememberCheckbox.checked = true;
+            }
+        });
+
+
+        loginForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const username = usernameInput.value.trim();
+            const password = document.getElementById("password").value.trim();
+            if (username !== "" && password !== "") {
+                if (rememberCheckbox.checked) {
+                    localStorage.setItem("rememberedUsername", username);
+                } else {
+                    localStorage.removeItem("rememberedUsername");
+                }
+                window.location.href = "websucces_.html";
+            } else {
+                alert("Please fill in both username and password.");
+            }
+        });
+    </script>
 </body>
 </html>
