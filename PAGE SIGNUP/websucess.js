@@ -22,7 +22,7 @@ const startCountdown = () => {
     countdownEl.textContent = countdown;
     if (countdown <= 0) {
       clearInterval(redirectTimer);
-      window.location.href = "homepage.html";
+      window.location.href = "../PAGE HOME/home_index.html";
     }
   }, 1000);
 };
@@ -31,14 +31,14 @@ const startCountdown = () => {
 document.querySelector('.close-btn').addEventListener('click', () => {
   clearInterval(redirectTimer);
   document.getElementById('login-success-popup').style.display = 'none';
-  window.location.href = "homepage.html";
+  window.location.href = "../PAGE HOME/home_index.html";
 });
 
 // Continue button functionality
 document.querySelector('.ok-btn').addEventListener('click', () => {
   clearInterval(redirectTimer);
   document.getElementById('login-success-popup').style.display = 'none';
-  window.location.href = "homepage.html";
+  window.location.href = "../PAGE HOME/home_index.html";
 });
 
 // Initialize
