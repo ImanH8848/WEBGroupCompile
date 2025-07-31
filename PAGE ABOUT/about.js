@@ -333,6 +333,17 @@ class AutoPlay {
   }
 }
 
+// =================== Back to Top Button ===================
+const backToTopBtn = document.getElementById('backToTop');
+if (backToTopBtn) {
+  window.addEventListener('scroll', () => {
+    backToTopBtn.classList.toggle('visible', window.pageYOffset > 300);
+  });
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 // Initialize carousel when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   const carousel = new TeamCarousel();
