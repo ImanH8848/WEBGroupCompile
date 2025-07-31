@@ -153,6 +153,7 @@
   max-width: 520px;
   width: 100%;
   box-sizing: border-box;
+  margin-top: 80px;
 }
 
 .contact-video {
@@ -232,6 +233,7 @@
   width: 100%;
   box-sizing: border-box;
   box-shadow: 0 0 15px rgba(255, 126, 95, 0.2);
+  margin-top: 80px;
 }
 
 .contact-left-title h1 {
