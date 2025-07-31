@@ -373,7 +373,7 @@ nav ul li .dropdown a {
 
 .product-card {
     position: relative;
-    background-color: var(--charcoal);
+    background-color: var(--offwhite);
     overflow: hidden;
     display: flex;
     flex-direction: column;

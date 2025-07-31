@@ -4,6 +4,22 @@
             box-sizing: border-box;
         }
 
+        @font-face {
+        font-family: 'Bebas Neue';
+        src: url('../assets/BEBAS/Bebas-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        :root {
+        --black: #000000;
+        --charcoal: #292929;
+        --light-gray: #b3b2b0;
+        --sand: #D6BFA8;
+        --brick: #A23E2E;
+        --offwhite: #FAFAFA;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.5;
