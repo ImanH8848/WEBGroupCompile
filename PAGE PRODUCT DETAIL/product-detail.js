@@ -129,7 +129,7 @@
         // Add to cart functionality
         document.querySelector('.add-to-cart-btn').addEventListener('click', function() {
             const selectedSize = document.querySelector('.size-btn.active').textContent;
-            alert(`Added Loose Fit Hoodie (Size ${selectedSize}) to cart!`);
+            alert(`Added Loose Fit Sweatshirt (Size ${selectedSize}) to cart!`);
         });
 
         // Wishlist functionality
